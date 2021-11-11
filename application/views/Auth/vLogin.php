@@ -17,17 +17,17 @@
                                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                                         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                                         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                                    </ol>    
+                                    </ol>
                                     <div class="carousel-caption d-none d-md-block">
                                         <!-- <h3>SIJEMAAT</h3> -->
                                         <p>GKI Kebonagung Web Services</p>
                                     </div>
                                     <div class="carousel-inner" style="opacity: 0.5;">
                                         <div class="carousel-item active">
-                                            <img src="" class="d-block w-100" style="object-fit: cover; height: 75vh;">
+                                            <img src="<?= base_url('assets/img/1.png')?>" class="d-block w-100" style="object-fit: cover; height: 75vh;">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="" class="d-block w-100" style="object-fit: cover; height: 75vh;">
+                                            <img src="<?= base_url('assets/img/2.png')?>" class="d-block w-100" style="object-fit: cover; height: 75vh;">
                                         </div>
                                         <div class="carousel-item">
                                             <img src="" class="d-block w-100" style="object-fit: cover; height: 75vh;">
@@ -53,7 +53,7 @@
                                 <?= $this->session->flashdata('message');?>
                                 <form action="<?= base_url('Auth') ?>" method="POST" class="user">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="username" placeholder="Username" autocomplete="off" required="required">
+                                        <input type="text" class="form-control form-control-user" name="username" placeholder="Username atau No. Telepon" autocomplete="off" required="required">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" name="password" placeholder="Password"  required="required">

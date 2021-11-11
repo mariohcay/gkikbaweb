@@ -57,7 +57,8 @@ class Profile extends CI_Controller
                 'tempatLahir' => $this->input->post('tempatLahir'),
                 'tanggalLahir' => $this->input->post('tanggalLahir'),
                 'telepon' => $this->input->post('telepon'),
-                'lingkungan' => $this->input->post('lingkungan')
+                'lingkungan' => $this->input->post('lingkungan'),
+                'vaksin' => $this->input->post('vaksin')
             ];
             
             $jemaat = $this->m_jemaat->ubahJemaat($id, $data);

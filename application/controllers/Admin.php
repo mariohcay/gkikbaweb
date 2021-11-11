@@ -76,6 +76,46 @@ class Admin extends CI_Controller {
             redirect('Admin/daftarJemaat');
         }
     }
+
+    public function detailJemaat($id){
+        if(_checkUser()){
+            $data['title'] = 'Daftar Jemaat - GKI Kebonagung Web Services';
+            $data['category'] = 'Daftar Jemaat';
+            $data['jemaat'] = $this->m_jemaat->ambilJemaatbyId($id);
+
+            $this->load->view('Templates/vHeader', $data);
+            $this->load->view('Admin/vAdminMainHeader');
+            $this->load->view('Admin/vAdminDetailJemaat');
+            $this->load->view('Admin/vAdminMainFooter');
+            $this->load->view('Templates/vFooter');
+        }
+    }
+
+    public function simpanUbahJemaat()
+    {
+        $user = $this->session->userdata('username');
+        if(!$user){
+            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Anda masuk terlebih dahulu</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+            redirect('Auth');
+        }else{
+            $id = $this->input->post('id');
+            $data = [
+                'username' => $this->input->post('username'),
+                'email' => $this->input->post('email'),
+                'nama' => $this->input->post('nama'),
+                'alamat' => $this->input->post('alamat'),
+                'jenisKelamin' => $this->input->post('jenisKelamin'),
+                'tempatLahir' => $this->input->post('tempatLahir'),
+                'tanggalLahir' => $this->input->post('tanggalLahir'),
+                'telepon' => $this->input->post('telepon'),
+                'lingkungan' => $this->input->post('lingkungan')
+            ];
+            
+            $jemaat = $this->m_jemaat->ubahJemaat($id, $data);
+            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> Data jemaat berhasil diperbaharui<i class="fa fa-check my-auto"></i></div>');
+            redirect('Admin/daftarJemaat');
+        }
+    }
     
     public function daftarIbadah(){
         if(_checkUser()){
@@ -166,6 +206,7 @@ class Admin extends CI_Controller {
             $data['title'] = 'Scan QR Code Ibadah - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
+            $data['jemaat'] = $this->m_kehadiran->jemaatHadir($kodeIbadah);
             
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
@@ -230,6 +271,21 @@ class Admin extends CI_Controller {
                 $this->m_kehadiran->updateKehadiran($id, $kodeIbadah);
                 $this->scanQRCodeIbadah($kodeIbadah);
             }
+        }
+    }
+
+    public function jemaatTerdaftar($kodeIbadah){
+        if(_checkUser()){
+            $data['category'] = 'Daftar Ibadah';
+            $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
+            $data['title'] = 'Jemaat Terdaftar di '.$data['ibadah']['namaIbadah'].' - GKI Kebonagung Web Services';
+            $data['jemaat'] = $this->m_kehadiran->jemaatTerdaftar($kodeIbadah);
+            
+            $this->load->view('Templates/vHeader', $data);
+            $this->load->view('Admin/vAdminMainHeader');
+            $this->load->view('Admin/vAdminJemaatTerdaftar');
+            $this->load->view('Admin/vAdminMainFooter');
+            $this->load->view('Templates/vFooter');
         }
     }
 }

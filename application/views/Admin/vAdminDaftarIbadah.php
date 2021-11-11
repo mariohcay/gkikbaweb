@@ -22,18 +22,19 @@
                 <?php $this->load->model('m_kehadiran');
                 foreach ($ibadahMingguIni as $data):?>
                   <div class="row">
-                    <div class="col-sm">
+                    <div class="col-lg-4">
                       <img class="img-fluid mx-3 my-3 shadow" style="width: 25rem;" src="<?= base_url('assets/img/thumbnail/').$data['image']?>" alt="">
                     </div>
-                    <div class="col-sm mx-3 my-3">
+                    <div class="col-lg mx-3 my-3">
                       <h5 class="text-dark"><?= $data['namaIbadah']?><br>"<?= $data['temaIbadah']?>"</h5>
                       <h6><?= tgl_indo($data['tanggalIbadah'], true)." - ".time_indo($data['jamIbadah'])." WIB"?></h6>
                       <?php
                         $terisi = $this->m_kehadiran->cekKuota($data['kodeIbadah']);
                       ?>
                       <h6>Kuota: <?=$terisi."/".$data['kuota']?></h6>
-                      <a href="<?= base_url('Admin/scanQRCodeIbadah/').$data['kodeIbadah']?>" class="btn btn-primary btn-sm p-2">SCAN QR CODE IBADAH</a>
-                      <a href="<?= base_url('Admin/detailIbadah/').$data['kodeIbadah']?>" class="btn btn-info btn-sm p-2">DETAIL</a>
+                      <a href="<?= base_url('Admin/scanQRCodeIbadah/').$data['kodeIbadah']?>" class="btn btn-primary btn-sm p-2 my-1 mr-1">SCAN QR CODE</a>
+                      <a href="<?= base_url('Admin/jemaatTerdaftar/').$data['kodeIbadah']?>" class="btn btn-success btn-sm p-2 my-1 mr-1">JEMAAT TERDAFTAR</a>
+                      <a href="<?= base_url('Admin/detailIbadah/').$data['kodeIbadah']?>" class="btn btn-info btn-sm p-2 my-1 mr-1">DETAIL</a>
                     </div>
                   </div>
                 <?php endforeach;?>

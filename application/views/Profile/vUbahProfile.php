@@ -60,6 +60,15 @@
                     <option value="Simpatisan" class="d-block" <?php if($jemaat['lingkungan'] === "Simpatisan" ){ echo "selected"; }; ?>>Simpatisan</option>
                   </select>
                 </li>
+                <li class="list-group-item">
+                  <label for="Status Vaksin Covid-19" class="font-weight-bold">Status Vaksin Covid-19</label>
+                  <select class="custom-select" name="vaksin">
+                    <option value="" class="d-block" <?php if($jemaat['vaksin'] === "" ){ echo "selected"; }; ?> disabled>Pilih...</option>
+                    <option value="Belum vaksin" class="d-block" <?php if($jemaat['vaksin'] === "Belum vaksin" ){ echo "selected"; }; ?>>Belum vaksin</option>
+                    <option value="Sudah 1x" class="d-block" <?php if($jemaat['vaksin'] === "Sudah 1x" ){ echo "selected"; }; ?>>Sudah 1x</option>
+                    <option value="Sudah 2x" class="d-block" <?php if($jemaat['vaksin'] === "Sudah 2x" ){ echo "selected"; }; ?>>Sudah 2x</option>
+                  </select>
+                </li>
               </ul>
               <hr>
               <div class="d-inline float-right align-items-center">

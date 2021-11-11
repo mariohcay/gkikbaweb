@@ -68,42 +68,44 @@ class Auth extends CI_Controller {
     private function _register()
     {
         $user = $this->input->post('username');
-        $nama = $this->input->post('nama');
+        $nama = ucwords(strtolower($this->input->post('nama')));
+        $telepon = $this->input->post('telepon');
         $email = $this->input->post('email');
         $pass1 = $this->input->post('pass1');
         $pass2 = $this->input->post('pass2');
 
         $jemaat = $this->m_jemaat->daftarJemaat();
+
+        $id = "JM".strval(count($jemaat)+100001);
+        $session = [
+            'id' => $id,
+            'username' => $user,
+            'nama' => $nama,
+            'email' => $email,
+            'password' => password_hash($pass1, PASSWORD_BCRYPT),
+            'telepon' => $telepon
+        ];
         foreach($jemaat as $data){
             if($data['username'] === $user){
                 $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Username telah terpakai</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+                $this->session->set_flashdata($session);
                 redirect('Auth/register');
             }
         }
         if($pass1 !== $pass2){
             $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Konfirmasi Password tidak cocok</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+            $this->session->set_flashdata($session);
             redirect('Auth/register');
         }else{
-            $id = "JM".strval(count($jemaat)+100001);
-            $data = [
-                'id' => $id,
-                'username' => $user,
-                'nama' => $nama,
-                'email' => $email,
-                'password' => password_hash($pass1, PASSWORD_BCRYPT)
-            ];
-
-            $this->m_jemaat->tambahJemaat($data);
+            $this->m_jemaat->tambahJemaat($session);
             $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> Berhasil membuat akun<i class="fa fa-check my-auto"></i></div>');
             redirect('Auth');
         }
-
-        
     }
 
     public function checkUsername(){
-        $username = $this->input->post('username');
-        $check = $this->m_jemaat->ambilJemaat($username);
+        $user = $this->input->post('username');
+        $check = $this->m_jemaat->ambilJemaat($user);
         $result = "0";
         if(!empty($check)){
             $result = "1";

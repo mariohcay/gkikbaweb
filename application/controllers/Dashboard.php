@@ -17,7 +17,7 @@ class Dashboard extends CI_Controller
             $data['title'] = 'Dashboard - GKI Kebonagung Web Services';
             $data['ibadahMingguIni'] = $this->m_ibadah->daftarIbadahMingguIni();
             $jemaat = $this->m_jemaat->ambilJemaat($user);
-            $data['alamat'] = $jemaat['alamat'];
+            $data['vaksin'] = $jemaat['vaksin'];
             
             // $chart = [];
             // foreach ($iklanBulanan as $row){

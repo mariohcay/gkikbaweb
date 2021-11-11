@@ -17,9 +17,9 @@ class M_jemaat extends CI_Model
         return $this->db->get_where('jemaat', ['jk' => 'Perempuan'])->result_array();
     }
 
-    public function ambilJemaat($username)
+    public function ambilJemaat($user)
     {
-        return $this->db->get_where('tb_jemaat', ['username' => $username])->row_array();
+        return $this->db->query("SELECT * FROM tb_jemaat WHERE username = '".$user."' OR telepon = '".$user."'")->row_array();
     }
 
     public function tambahJemaat($data)
@@ -32,9 +32,9 @@ class M_jemaat extends CI_Model
         $this->db->where('id', $id)->update('tb_jemaat', $data);
     }
 
-    public function hapusJemaat($noInduk)
+    public function ambilJemaatbyId($id)
     {
-        $this->db->where('noinduk', $noInduk)->delete('jemaat');
+        return $this->db->get_where('tb_jemaat', ['id' => $id])->row_array();
     }
 
     public function ambilDataTerakhir()

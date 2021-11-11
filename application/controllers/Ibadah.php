@@ -9,18 +9,18 @@ class Ibadah extends CI_Controller
         $this->load->model('m_jemaat');
         $this->load->model('m_kehadiran');
     }
-    
+
     public function index()
     {
         $user = $this->session->userdata('username');
-        if(_checkUser()){
+        if (_checkUser()) {
             $id = $this->session->userdata('id');
             $data['title'] = 'Ibadah - GKI Kebonagung Web Services';
             $data['ibadah'] = $this->m_ibadah->daftarIbadahSelesai();
             $data['ibadahMingguIni'] = $this->m_ibadah->daftarIbadahMingguIni();
             $jemaat = $this->m_jemaat->ambilJemaat($user);
-            $data['alamat'] = $jemaat['alamat'];
-            
+            $data['vaksin'] = $jemaat['vaksin'];
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Main/vMainHeader');
             $this->load->view('Main/vIbadah');
@@ -31,11 +31,11 @@ class Ibadah extends CI_Controller
 
     public function DaftarIbadah($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['title'] = 'Daftar Ibadah - GKI Kebonagung Web Services';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
             $data['terisi'] = $this->m_kehadiran->cekKuota($kodeIbadah);
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Main/vMainHeader');
             $this->load->view('Main/vDaftarIbadah');
@@ -46,9 +46,13 @@ class Ibadah extends CI_Controller
 
     public function selesaiDaftar($id, $kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
+            $jemaat = $this->m_jemaat->ambilJemaatbyId($id);
             $data = [
                 'id' => $id,
+                'nama' => $jemaat['nama'],
+                'jenisKelamin' => $jemaat['jenisKelamin'],
+                'lingkungan' => $jemaat['lingkungan'],
                 'kodeIbadah' => $kodeIbadah,
                 'status' => "TERDAFTAR"
             ];
@@ -59,10 +63,10 @@ class Ibadah extends CI_Controller
 
     public function lihatIbadah($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['title'] = 'Lihat Ibadah - GKI Kebonagung Web Services';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Main/vMainHeader');
             $this->load->view('Main/vLihatIbadah');
@@ -71,26 +75,26 @@ class Ibadah extends CI_Controller
         }
     }
 
-    public function renderQRCode()
+    public function renderQRCode($id)
     {
-        if(_checkUser()){
-            $this->load->library('Ciqrcode');
-            QRCode::png(
-                $this->session->userdata('id'),
-                $outfile = FALSE,
-                $level = QR_ECLEVEL_H,
-                $size = 10,
-                $margin = 2
-            );
-        }
+        $this->load->library('Ciqrcode');
+        QRCode::png(
+            $id,
+            $outfile = FALSE,
+            $level = QR_ECLEVEL_H,
+            $size = 10,
+            $margin = 2
+        );
     }
 
     public function lihatQRCode($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['title'] = 'Lihat Ibadah - GKI Kebonagung Web Services';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-            
+            $id = $this->session->userdata('id');
+            $data['jemaat'] = $this->m_kehadiran->cekStatusKehadiran($id, $kodeIbadah);
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Main/vMainHeader');
             $this->load->view('Main/vLihatQRCode');

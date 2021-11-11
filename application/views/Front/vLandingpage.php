@@ -64,9 +64,9 @@
                     <h2 class="text-white mt-0">Pengumuman Penting!</h2>
                     <hr class="divider divider-light" />
                     <p class="text-white-75 mb-5">
-                    Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat direncanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: Prokes, sudah mendapatkan vaksin, berusia 13 – 70 tahun.</b> <br><br>Minggu ke-1 dan ke-2 kehadiran jemaat per lingkungan. Minggu ke-3 dan ke-4 undangan umum dengan pendaftaran maksimal hari Kamis. Penatua pendamping berkoordinasi dengan koordinator lingkungan.
+                    Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: Prokes, sudah mendapatkan vaksin, berusia 13 – 70 tahun.</b> <br><br>Untuk ibadah mulai tanggal 14 November 2021, jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
                     </p>
-                    <a class="btn btn-light btn-xl scroll" href="#ibadah">Dapatkan Link</a>
+                    <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
     <!-- Ibadah -->
     <section class="page-section" id="ibadah">
         <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0">Ibadah Minggu ini</h2>
+            <h2 class="text-center mt-0">Ibadah <i>Online</i> Minggu ini</h2>
             <hr class="divider" />
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-8 align-self-baseline">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center ">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
@@ -272,7 +272,7 @@
     <!-- Kontak -->
     <section class="page-section" id="kontak">
         <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6 text-center">
                     <h2 class="mt-0">Hubungi Kami</h2>
                     <hr class="divider" />

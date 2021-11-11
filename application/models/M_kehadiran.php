@@ -7,6 +7,14 @@ class M_kehadiran extends CI_Model
         $this->db->insert('tb_kehadiran', $data);
     }
 
+    public function jemaatTerdaftar($kodeIbadah){
+        return $this->db->get_where('tb_kehadiran', ['status' => "TERDAFTAR", 'kodeIbadah' => $kodeIbadah])->result_array();
+    }
+
+    public function jemaatHadir($kodeIbadah){
+        return $this->db->get_where('tb_kehadiran', ['status' => "HADIR", 'kodeIbadah' => $kodeIbadah])->result_array();
+    }
+
     public function cekStatusKehadiran($id, $kodeIbadah){
         return $this->db->get_where('tb_kehadiran', ['id' => $id, 'kodeIbadah' => $kodeIbadah])->row_array();
     }
@@ -14,10 +22,6 @@ class M_kehadiran extends CI_Model
     public function cekKuota($kodeIbadah)
     {
         return count($this->db->get_where('tb_kehadiran', ['kodeIbadah' => $kodeIbadah])->result_array());
-    }
-
-    public function ambilKehadiran($kodeIbadah){
-        return $this->db->query("SELECT * FROM tb_kehadiran INNER JOIN tb_jemaat ON tb_kehadiran.id = tb_jemaat.id WHERE kodeIbadah = '".$kodeIbadah."'AND status='HADIR'")->result_array();
     }
 
     public function updateKehadiran($id, $kodeIbadah){

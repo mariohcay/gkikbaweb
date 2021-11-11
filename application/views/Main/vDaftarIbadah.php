@@ -6,13 +6,14 @@
             <div class="card shadow mb-4">
               <div class="card-body mr-4">
                 Sebelum mendaftarkan diri untuk mengikuti Ibadah Onsite, Jemaat dimohon untuk memperhatikan terlebih dahulu Protokol Kesehatan Mengikuti Ibadah Onsite GKI Kebonagung berikut ini: <br><br>
-                1.&ensp; Berusia 15-59 tahun <br>
-                2.&ensp; Kondisi sehat (Tidak sedang sakit dalam waktu 2 hari sebelumnya) <br>
-                3.&ensp; Hadir tepat waktu <br>
-                4.&ensp; Bersedia melakukan pengecekan suhu tubuh <br>
-                5.&ensp; Cuci tangan sebelum masuk gereja <br>
-                6.&ensp; Wajib mengenakan masker <br>
-                7.&ensp; Duduk sesuai tempat yang telah diberi tanda guna menjaga jarak.
+                1.&ensp; Sudah mendapatkan vaksin <br>
+                2.&ensp; Berusia 13-70 tahun <br>
+                3.&ensp; Kondisi sehat (Tidak sedang sakit dalam waktu 2 hari sebelumnya) <br>
+                4.&ensp; Hadir tepat waktu <br>
+                5.&ensp; Bersedia melakukan pengecekan suhu tubuh <br>
+                6.&ensp; Cuci tangan sebelum masuk gereja <br>
+                7.&ensp; Wajib mengenakan masker <br>
+                8.&ensp; Duduk sesuai tempat yang telah diberi tanda guna menjaga jarak.
               </div>
             </div>
 

@@ -14,7 +14,7 @@
           <?= $this->session->flashdata('welcome'); ?>
           <?= $this->session->flashdata('message'); ?>
           <?php
-          if ($alamat == '') {
+          if ($vaksin == '') {
             echo '
                   <div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Anda belum melengkapi data jemaat, <a class="font-weight-bold" href=' . base_url('Profile/ubahProfile') . '>Lengkapi Sekarang</a> untuk memperbaharui data jemaat</small><i class="fa fa-exclamation-circle my-auto"></i></div>
                 ';
@@ -25,38 +25,49 @@
                                           echo "d-none";
                                         } ?>">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Ibadah Onsite Minggu Ini</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Ibadah On-site Minggu Ini</h6>
             </div>
             <div class="card-body mr-4">
               <?php $this->load->model('m_kehadiran');
               foreach ($ibadahMingguIni as $data) : ?>
                 <div class="row">
-                  <div class="col-sm">
-                    
+                  <div class="col-lg-4">
+
                     <img class="img-fluid mx-3 my-3 shadow" style="width: 25rem;" src="<?= base_url('assets/img/thumbnail/') . $data['image'] ?>" alt="">
                   </div>
-                  <div class="col-sm mx-3 my-3">
+                  <div class="col-lg mx-3 my-3">
                     <h5 class="text-dark"><?= $data['namaIbadah'] ?><br>"<?= $data['temaIbadah'] ?>"</h5>
                     <h6><?= tgl_indo($data['tanggalIbadah'], true) . " - " . time_indo($data['jamIbadah']) . " WIB" ?></h6>
                     <?php
                     $terisi = $this->m_kehadiran->cekKuota($data['kodeIbadah']);
                     ?>
-                    <!-- <h6>Kuota: <?= $terisi . "/" . $data['kuota'] ?></h6> -->
+                    <h6><?php
+                        $tersedia = $data['kuota'] - $terisi;
+                        if ($vaksin !== "Belum vaksin") {
 
+                          if ($tersedia > 0) {
+                            echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
+                          } else echo "<b class='text-danger'>Maaf kuota sudah habis</b>";
+                        }
+                        ?></h6>
                     <?php
                     $id = $this->session->userdata('id');
                     $kehadiran = $this->m_kehadiran->cekStatusKehadiran($id, $data['kodeIbadah']);
-                    if (!empty($alamat)) {
-                      if (!empty($kehadiran)) {
-                        if ($kehadiran['status'] == "TERDAFTAR") {
-                          echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
-                        } else if ($kehadiran['status'] == "HADIR") {
-                          echo '<a href="#" class="btn btn-secondary btn-sm p-2">ANDA SUDAH MENGIKUTI IBADAH</a>';
+                    if (!empty($vaksin)) {
+                      if ($vaksin !== "Belum vaksin") {
+                        if (!empty($kehadiran)) {
+                          if ($kehadiran['status'] == "TERDAFTAR") {
+                            echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
+                          } else if ($kehadiran['status'] == "HADIR") {
+                            echo '<a href="#" class="btn btn-secondary btn-sm p-2">ANDA SUDAH MENGIKUTI IBADAH</a>';
+                          } else {
+                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-primary p-2">LIHAT</a>';
+                          }
                         } else {
-                          echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-primary p-2">LIHAT</a>';
+                          echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2">DAFTAR</a>';
                         }
                       } else {
-                        echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2">LIHAT</a>';
+                        echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-primary p-2">LIHAT</a>';
                       }
                     }
                     ?>

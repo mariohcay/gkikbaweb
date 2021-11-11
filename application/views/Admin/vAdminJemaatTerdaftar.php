@@ -14,35 +14,22 @@
             <!-- Page Heading -->
             <h1 class="h3 mb-4 text-gray-800"><?= $ibadah['namaIbadah'] ?></h1>
 
-            <div class="card shadow mb-4">
-              <div class="card-body">
-                <form action="<?= base_url('Admin/tambahKehadiran/').$ibadah['kodeIbadah'] ?>" method="POST">
-                  <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Masukkan QR Code disini" aria-label="Scan QR Code disini" aria-describedby="button-addon2" name="qrcode" autofocus required autocomplete="off">
-                      <button class="btn btn-dark btn-sm" type="submit" id="button-addon2">CEK KEHADIRAN</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
             <!-- DataTales Example -->
             <?= $this->session->flashdata('message'); ?>
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Daftar Kehadiran Jemaat</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Jemaat Terdaftar</h6>
               </div>
               <div class="card-body" id="daftarHadir">
                 <div class="table-responsive">
-                <?php
-                    $this->load->model('m_kehadiran');
-                    $kodeIbadah = $ibadah['kodeIbadah'];
-                    $kehadiran = $this->m_kehadiran->jemaatHadir($kodeIbadah);
-                ?>
-                  <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
                         <th>No</th>
+                        <td>QR Code</td>
+                        <th>Id</th>
                         <th>Nama</th>
+                        <th>Jenis Kelamin</th>
                         <th>Lingkungan</th>
                       </tr>
                     </thead>
@@ -52,7 +39,10 @@
                         foreach($jemaat as $data):?>
                             <tr>
                                 <td><?= $i ?></td>
+                                <td><img src="<?php echo base_url('Ibadah/renderQRCode/'. $data['id']) ?>" alt="" class="" width="100"></td>
+                                <td><?= $data['id']?></td>
                                 <td><?= $data['nama']?></td>
+                                <td><?= $data['jenisKelamin']?></td>
                                 <td><?= $data['lingkungan']?></td>
                             </tr>
                             <?php 
