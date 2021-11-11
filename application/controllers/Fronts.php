@@ -30,7 +30,7 @@ class Fronts extends CI_Controller
         $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
         $data['kodeIbadah'] = $kodeIbadah;
         $data['title'] = "Daftar Ibadah Onsite - GKI Kebonagung";
-        $this->load->view('Front/vdaftarOnsite', $data);
+        $this->load->view('Front/vDaftarOnsite', $data);
     }
 
     public function submitDaftarOnsite($kodeIbadah){
