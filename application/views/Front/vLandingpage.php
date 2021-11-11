@@ -87,17 +87,17 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/11YuxT4SYCU" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/ivbaDt7Qaxc" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Keluarga yang Hidup Dalam Nilai Pengurbanan Kristus"<br>Minggu, 24 Oktober 2021 - 07.00 WIB <br>Pdt. Teguh hadi Saputro</p>
+                                <p class="card-text">"Hidup di Akhir Zaman"<br>Minggu, 14 November 2021 - 07.00 WIB <br>Sdri. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://youtu.be/11YuxT4SYCU" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://youtu.be/ivbaDt7Qaxc" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
