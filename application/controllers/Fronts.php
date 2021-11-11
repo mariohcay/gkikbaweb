@@ -22,7 +22,7 @@ class Fronts extends CI_Controller
     {
         $data['ibadah'] = $this->m_ibadah->daftarIbadahMingguIni();
         $data['title'] = "Daftar Ibadah Onsite - GKI Kebonagung";
-        $this->load->view('Front/vpilihOnsite', $data);
+        $this->load->view('Front/vPilihOnsite', $data);
     }
 
     public function daftarOnsite($kodeIbadah)
