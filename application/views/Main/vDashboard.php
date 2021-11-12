@@ -12,7 +12,6 @@
           </div>
 
           <?= $this->session->flashdata('welcome'); ?>
-          <?= $this->session->flashdata('message'); ?>
           <?php
           if ($vaksin == '') {
             echo '
@@ -47,27 +46,37 @@
 
                           if ($tersedia > 0) {
                             echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
-                          } else echo "<b class='text-danger'>Maaf kuota sudah habis</b>";
+                          } else {
+                            echo "<b class='text-danger'>Mohon maaf kuota ibadah on-site sudah habis</b>";
+                          }
+                        } else {
+                          echo "<b class='text-danger'>Mohon maaf Anda belum mendapatkan vaksin sehingga belum bisa mengikuti ibadah on-site</b>";
                         }
                         ?></h6>
                     <?php
                     $id = $this->session->userdata('id');
                     $kehadiran = $this->m_kehadiran->cekStatusKehadiran($id, $data['kodeIbadah']);
-                    if (!empty($vaksin)) {
-                      if ($vaksin !== "Belum vaksin") {
+                    if ($vaksin !== "") { //jika data vaksin tidak kosong
+                      if ($vaksin !== "Belum vaksin") { //jika sudah vaksin
                         if (!empty($kehadiran)) {
-                          if ($kehadiran['status'] == "TERDAFTAR") {
-                            echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
-                          } else if ($kehadiran['status'] == "HADIR") {
-                            echo '<a href="#" class="btn btn-secondary btn-sm p-2">ANDA SUDAH MENGIKUTI IBADAH</a>';
-                          } else {
-                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-primary p-2">LIHAT</a>';
+                          if ($kehadiran['status'] === "TERDAFTAR") {
+                            echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
+                          } else if ($kehadiran['status'] === "HADIR") {
+                            echo '<a href="#" class="btn btn-secondary btn-sm p-2 my-1 mr-1">ANDA SUDAH MENGIKUTI IBADAH</a>';
                           }
-                        } else {
-                          echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2">DAFTAR</a>';
+                          // } else {
+                          //   echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
+                          // }
+                        } else { //jika belum daftar
+                          if ($tersedia > 0) { //jika kuota masih ada
+                            echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2 my-1 mr-1">DAFTAR</a>';
+                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
+                          } else { //jika kuota habis
+                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
+                          }
                         }
-                      } else {
-                        echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-primary p-2">LIHAT</a>';
+                      } else { //jika belum vaksin
+                        echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
                       }
                     }
                     ?>

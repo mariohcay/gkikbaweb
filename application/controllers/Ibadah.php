@@ -20,6 +20,10 @@ class Ibadah extends CI_Controller
             $data['ibadahMingguIni'] = $this->m_ibadah->daftarIbadahMingguIni();
             $jemaat = $this->m_jemaat->ambilJemaat($user);
             $data['vaksin'] = $jemaat['vaksin'];
+            $birthDate = $jemaat['tanggalLahir'];
+            $currentDate = date("d-m-Y");
+            $age = date_diff(date_create($birthDate), date_create($currentDate))->y;
+            $data['age'] = $age;
 
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Main/vMainHeader');

@@ -12,23 +12,17 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $user = $this->session->userdata('username');
             $data['title'] = 'Dashboard - GKI Kebonagung Web Services';
             $data['ibadahMingguIni'] = $this->m_ibadah->daftarIbadahMingguIni();
             $jemaat = $this->m_jemaat->ambilJemaat($user);
             $data['vaksin'] = $jemaat['vaksin'];
-            
-            // $chart = [];
-            // foreach ($iklanBulanan as $row){
-            //     $chart['label'][] = $row->bulan;
-            //     $chart['data'][] = (int)$row->jumlah;
-            // }
+            $birthDate = $jemaat['tanggalLahir'];
+            $currentDate = date("d-m-Y");
+            $age = date_diff(date_create($birthDate), date_create($currentDate))->y;
+            $data['age'] = $age;
 
-            // $data['jemaat'] = $this->m_jemaat->daftarJemaat();
-            // $data['lakiLaki'] = $this->m_jemaat->lakiLaki();
-            // $data['perempuan'] = $this->m_jemaat->perempuan();
-            
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Main/vMainHeader');
             $this->load->view('Main/vDashboard');
