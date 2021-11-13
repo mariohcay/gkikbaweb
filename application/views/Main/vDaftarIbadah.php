@@ -21,11 +21,11 @@
             <div class="card shadow mb-4">
               <div class="card-body mr-4">
                   <div class="row">
-                    <div class="col-sm">
+                    <div class="col-lg-4">
                       
                       <img class="img-fluid mx-3 my-3 shadow" style="width: 25rem;" src="<?= base_url('assets/img/thumbnail/').$ibadah['image']?>" alt="">
                     </div>
-                    <div class="col-sm mx-3 my-3">
+                    <div class="col-lg mx-3 my-3">
                       <h5 class="text-dark"><?= $ibadah['namaIbadah']?><br>"<?= $ibadah['temaIbadah']?>"</h5>
                       <h6><?= tgl_indo($ibadah['tanggalIbadah'], true)." - ".time_indo($ibadah['jamIbadah'])." WIB"?></h6>
                       <pre><span style="font-family:nunito; font-size:13pt" class="text-gray-600"><?= $ibadah['deskripsi']?></span></pre>

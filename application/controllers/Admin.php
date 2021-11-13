@@ -288,4 +288,12 @@ class Admin extends CI_Controller {
             $this->load->view('Templates/vFooter');
         }
     }
+
+    public function hapusJemaatTerdaftarOnsite($id, $kodeIbadah, $nama){
+        if(_checkUser()){
+            $this->m_kehadiran->hapusKehadiran($id, $kodeIbadah);
+            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>$nama berhasil dihapus dari jemaat terdaftar</small><i class="fa fa-check my-auto"></i></div>');
+            $this->jemaatTerdaftar($kodeIbadah);
+        }
+    }
 }

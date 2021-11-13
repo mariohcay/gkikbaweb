@@ -112,7 +112,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Masa Depan Penuh Harapan"<br>Minggu, 24 Oktober 2021 - 09.00 WIB <br>Kak Brina & pak Wahyu</p>
+                                <p class="card-text">"Surprise!"<br>Minggu, 14 November 2021 - 09.00 WIB <br>Kak Brina & Bu Datik</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -131,7 +131,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Persekutuan KPR</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Quality Time"<br>Minggu, 24 Oktober 2021 - 17.00 WIB <br>Sdri. Agnes Kristanti N.</p>
+                                <p class="card-text">"Gereja dalam Gereja"<br>Minggu, 14 November 2021 - 17.00 WIB <br>Pdt. Imanuel Gunawan Prasidi</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -140,21 +140,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://meet.google.com/ivm-tqxs-kaa" target="_blank" class="text-decoration-none">
+                            <a href="https://meet.google.com/qtc-fuvq-kpu" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/sarasehan.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Sarasehan Bulan Keluarga</h4>
+                                <h4 class="card-title">Pemahaman Alkitab</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Ketahanan Keluarga di Tengah Krisis Kehidupan"<br>Jumat, 29 Oktober 2021 - 18.00 WIB <br>Ibu Lydia Indriarti, S.Si.</p>
+                                <p class="card-text">"Dari Penderitaan Diri Menuju Pengharapan Bersama"<br>Kamis, 18 November 2021 - 18.00 WIB <br>Sdr. Rivaldy Anjar Saputra</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://meet.google.com/ivm-tqxs-kaa" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://meet.google.com/qtc-fuvq-kpu" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +246,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 24 Oktober 2021">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 14 November 2021">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -258,7 +258,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 24 Oktober 2021"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 14 November 2021"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
                         </a>

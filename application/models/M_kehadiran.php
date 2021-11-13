@@ -29,4 +29,8 @@ class M_kehadiran extends CI_Model
         $time = date('H:i:s');
         return $this->db->query("UPDATE tb_kehadiran SET time = '".$time."', status = 'HADIR' WHERE id = '".$id."' AND kodeIbadah = '".$kodeIbadah."'");
     }
+
+    public function hapusKehadiran($id, $kodeIbadah){
+        $this->db->delete('tb_kehadiran', ['id' => "$id", 'kodeIbadah' => "$kodeIbadah"]);
+    }
 }
