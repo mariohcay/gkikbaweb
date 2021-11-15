@@ -30,10 +30,10 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link scroll" href="#ibadah">Ibadah</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#galeri">Galeri</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#download">Download</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#kontak">Kontak</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#ibadah">Ibadah</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#galeri">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#download">Download</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#kontak">Kontak</a></li>
                     <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
                 </ul>
             </div>

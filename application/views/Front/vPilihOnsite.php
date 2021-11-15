@@ -30,10 +30,10 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link scroll" href="#ibadah">Ibadah</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#galeri">Galeri</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#download">Download</a></li>
-                    <li class="nav-item"><a class="nav-link scroll" href="#kontak">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#ibadah">Ibadah</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#galeri">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#download">Download</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#kontak">Kontak</a></li>
                     <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
                 </ul>
             </div>
@@ -42,11 +42,18 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container px-4 px-lg-5 h-100">
+            
+            
             <div class="row gx-4 gx-lg-5 justify-content-center mt-5">
                 <div class="col-lg-8 col-xl-6 text-center">
+                <?php if (!empty($ibadah)) { ?>
                     <h2 class="mt-0 text-white">Pilih Ibadah <i>On-site</i></h2>
                     <hr class="divider" />
                     <p class="text-white mb-5">Jika Anda sudah memiliki akun jemaat, Anda dapat mendaftar Ibadah <i>on-site</i> dengan <a href="<?= base_url() ?>Auth/register" class="font-weight-bold text-white">klik di sini</a></p>
+                <?php } 
+                else { ?>
+                    <h2 class="mt-0 text-white">Mohon maaf pendaftaran ibadah <i>on-site </i> belum tersedia hari ini.</h2>
+                <?php } ?>
                 </div>
             </div>
             <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
