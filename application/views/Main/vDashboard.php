@@ -31,7 +31,6 @@
               foreach ($ibadahMingguIni as $data) : ?>
                 <div class="row">
                   <div class="col-lg-4">
-
                     <img class="img-fluid mx-3 my-3 shadow" style="width: 25rem;" src="<?= base_url('assets/img/thumbnail/') . $data['image'] ?>" alt="">
                   </div>
                   <div class="col-lg mx-3 my-3">

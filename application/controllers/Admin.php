@@ -1,23 +1,28 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
+require('./vendor/autoload.php');
 
-class Admin extends CI_Controller {
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
-	public function __construct()
-	{
-		parent::__construct();
+class Admin extends CI_Controller
+{
+
+    public function __construct()
+    {
+        parent::__construct();
         $this->load->model('m_jemaat');
         $this->load->model('m_ibadah');
         $this->load->model('m_kehadiran');
-	}
+    }
 
-    public function index(){
-        if(_checkUser()){
+    public function index()
+    {
+        if (_checkUser()) {
             $data['title'] = 'Admin Dashboard - GKI Kebonagung Web Services';
             $data['category'] = 'Dashboard';
             $data['jemaat'] = $this->m_jemaat->daftarJemaat();
             $data['ibadahMingguIni'] = $this->m_ibadah->daftarIbadahMingguIni();
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminDashboard');
@@ -28,11 +33,11 @@ class Admin extends CI_Controller {
 
     public function daftarJemaat()
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['title'] = 'Daftar Jemaat - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Jemaat';
             $data['jemaat'] = $this->m_jemaat->daftarJemaat();
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminDaftarJemaat');
@@ -41,11 +46,12 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function tambahJemaat(){
-        if(_checkUser()){
+    public function tambahJemaat()
+    {
+        if (_checkUser()) {
             $data['title'] = 'Tambah Jemaat - GKI Kebonagung Web Services';
             $data['category'] = 'Tambah Jemaat';
-            $data['id'] = "JM".strval(count($this->m_jemaat->daftarJemaat())+100001);
+            $data['id'] = "JM" . strval(count($this->m_jemaat->daftarJemaat()) + 100001);
 
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
@@ -55,8 +61,9 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function simpanTambahJemaat(){
-        if(_checkUser()){
+    public function simpanTambahJemaat()
+    {
+        if (_checkUser()) {
             $data = [
                 'id' => $this->input->post('id'),
                 'username' => $this->input->post('username'),
@@ -70,15 +77,16 @@ class Admin extends CI_Controller {
                 'telepon' => $this->input->post('telepon'),
                 'lingkungan' => $this->input->post('lingkungan')
             ];
-            
+
             $this->m_jemaat->tambahJemaat($data);
             $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> Data jemaat berhasil ditambahkan<i class="fa fa-check my-auto"></i></div>');
             redirect('Admin/daftarJemaat');
         }
     }
 
-    public function detailJemaat($id){
-        if(_checkUser()){
+    public function detailJemaat($id)
+    {
+        if (_checkUser()) {
             $data['title'] = 'Daftar Jemaat - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Jemaat';
             $data['jemaat'] = $this->m_jemaat->ambilJemaatbyId($id);
@@ -94,10 +102,10 @@ class Admin extends CI_Controller {
     public function simpanUbahJemaat()
     {
         $user = $this->session->userdata('username');
-        if(!$user){
+        if (!$user) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Anda masuk terlebih dahulu</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
             redirect('Auth');
-        }else{
+        } else {
             $id = $this->input->post('id');
             $data = [
                 'username' => $this->input->post('username'),
@@ -110,20 +118,21 @@ class Admin extends CI_Controller {
                 'telepon' => $this->input->post('telepon'),
                 'lingkungan' => $this->input->post('lingkungan')
             ];
-            
+
             $jemaat = $this->m_jemaat->ubahJemaat($id, $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> Data jemaat berhasil diperbaharui<i class="fa fa-check my-auto"></i></div>');
             redirect('Admin/daftarJemaat');
         }
     }
-    
-    public function daftarIbadah(){
-        if(_checkUser()){
+
+    public function daftarIbadah()
+    {
+        if (_checkUser()) {
             $data['title'] = 'Daftar Ibadah - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Ibadah';
             $data['ibadahMingguIni'] = $this->m_ibadah->daftarIbadahMingguIni();
             $data['ibadah'] = $this->m_ibadah->daftarIbadahSelesai();
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminDaftarIbadah');
@@ -132,8 +141,9 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function tambahIbadah(){
-        if(_checkUser()){
+    public function tambahIbadah()
+    {
+        if (_checkUser()) {
             $data['title'] = 'Tambah Ibadah - GKI Kebonagung Web Services';
             $data['category'] = 'Tambah Ibadah';
 
@@ -145,15 +155,16 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function simpanTambahIbadah(){
-        if(_checkUser()){
+    public function simpanTambahIbadah()
+    {
+        if (_checkUser()) {
             $tanggalIbadah = $this->input->post('tanggalIbadah');
-            $jamIbadah = $this->input->post('jam').":".$this->input->post('menit').":00";
+            $jamIbadah = $this->input->post('jam') . ":" . $this->input->post('menit') . ":00";
             $pecahkan = explode('-', $tanggalIbadah);
-            $kodeIbadah = $pecahkan[2].$pecahkan[1].$pecahkan[0];
+            $kodeIbadah = $pecahkan[2] . $pecahkan[1] . $pecahkan[0];
 
             $ibadah = [
-                'kodeIbadah' => "IB".$kodeIbadah,
+                'kodeIbadah' => "IB" . $kodeIbadah,
                 'namaIbadah' => $this->input->post('namaIbadah'),
                 'temaIbadah' => $this->input->post('temaIbadah'),
                 'tanggalIbadah' => $tanggalIbadah,
@@ -167,34 +178,35 @@ class Admin extends CI_Controller {
                 'upload_path' => './assets/img/thumbnail/',
                 'allowed_types' => 'jpg|jpeg|png',
                 'max_size' => 1024,
-                'file_name' => 'Thumbnail-'.tgl_indo($tanggalIbadah)
+                'file_name' => 'Thumbnail-' . tgl_indo($tanggalIbadah)
             ];
 
             $this->load->library('upload', $config);
-            if(@$_FILES['image']['name'] != null){
-                if($this->upload->do_upload('image')){
+            if (@$_FILES['image']['name'] != null) {
+                if ($this->upload->do_upload('image')) {
                     $ibadah['image'] = $this->upload->data('file_name');
                     $this->m_ibadah->tambahIbadah($ibadah);
                     $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Berhasil menambahkan Ibadah baru</small><i class="fa fa-check my-auto"></i></div>');
                     $this->daftarIbadah();
                 } else {
                     $error = $this->upload->display_errors();
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>'.$error .'</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>' . $error . '</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
                     $this->tambahIbadah();
                 }
             }
         }
     }
 
-    public function detailIbadah($kodeIbadah){
-        if(_checkUser()){
+    public function detailIbadah($kodeIbadah)
+    {
+        if (_checkUser()) {
             $data['title'] = 'Detail Ibadah - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-            if($data['ibadah']['tanggalIbadah'] < date('Y-m-d') && $data['ibadah']['status'] === "BUKA"){
+            if ($data['ibadah']['tanggalIbadah'] < date('Y-m-d') && $data['ibadah']['status'] === "BUKA") {
                 $this->m_ibadah->tutupDaftarOnsite($kodeIbadah);
             }
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminDetailIbadah');
@@ -205,12 +217,12 @@ class Admin extends CI_Controller {
 
     public function scanQRCodeIbadah($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['title'] = 'Scan QR Code Ibadah - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
             $data['jemaat'] = $this->m_kehadiran->jemaatHadir($kodeIbadah);
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminScanQRCodeIbadah');
@@ -221,11 +233,11 @@ class Admin extends CI_Controller {
 
     public function ubahIbadah($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['title'] = 'Ubah Ibadah - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminUbahIbadah');
@@ -236,9 +248,9 @@ class Admin extends CI_Controller {
 
     public function simpanUbahIbadah($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $tanggalIbadah = $this->input->post('tanggalIbadah');
-            $jamIbadah = $this->input->post('jam').":".$this->input->post('menit').":00";
+            $jamIbadah = $this->input->post('jam') . ":" . $this->input->post('menit') . ":00";
 
             $ibadah = [
                 'namaIbadah' => $this->input->post('namaIbadah'),
@@ -258,15 +270,15 @@ class Admin extends CI_Controller {
 
     public function tambahKehadiran($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $id = $this->input->post('qrcode');
             $cek = $this->m_kehadiran->cekStatusKehadiran($id, $kodeIbadah);
-            
-            if(empty($cek)){
+
+            if (empty($cek)) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Data tidak ditemukan, kemungkinan Anda belum melakukan pendaftaran</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
                 $this->scanQRCodeIbadah($kodeIbadah);
             } else {
-                if($cek['status'] === "HADIR"){
+                if ($cek['status'] === "HADIR") {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Anda sudah melakukan scan QR Code sebelumnya</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
                     $this->scanQRCodeIbadah($kodeIbadah);
                 }
@@ -279,12 +291,12 @@ class Admin extends CI_Controller {
 
     public function jemaatTerdaftar($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-            $data['title'] = 'Jemaat Terdaftar di '.$data['ibadah']['namaIbadah'].' - GKI Kebonagung Web Services';
+            $data['title'] = 'Jemaat Terdaftar di ' . $data['ibadah']['namaIbadah'] . ' - GKI Kebonagung Web Services';
             $data['jemaat'] = $this->m_kehadiran->jemaatTerdaftar($kodeIbadah);
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminJemaatTerdaftar');
@@ -295,30 +307,31 @@ class Admin extends CI_Controller {
 
     public function hapusJemaatTerdaftarOnsite($id, $kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $this->m_kehadiran->hapusKehadiran($id, $kodeIbadah);
             $nama = $this->m_jemaat->ambilJemaatbyId($id)['nama'];
-            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small><b>'.$nama.'</b> berhasil dihapus dari jemaat terdaftar</small><i class="fa fa-check my-auto"></i></div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small><b>' . $nama . '</b> berhasil dihapus dari jemaat terdaftar</small><i class="fa fa-check my-auto"></i></div>');
             $this->jemaatTerdaftar($kodeIbadah);
         }
     }
-    
+
     public function tutupDaftarOnsite($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $this->m_ibadah->tutupDaftarOnsite($kodeIbadah);
+            $this->m_kehadiran->setTidakHadir();
             $namaIbadah = $this->m_ibadah->ambilIbadah($kodeIbadah)['namaIbadah'];
-            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Pendaftaran <b>'.$namaIbadah.'</b> telah ditutup</small><i class="fa fa-check my-auto"></i></div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Pendaftaran <b>' . $namaIbadah . '</b> telah ditutup</small><i class="fa fa-check my-auto"></i></div>');
             $this->daftarIbadah();
         }
     }
 
     public function daftarKehadiranOnsite($kodeIbadah)
     {
-        if(_checkUser()){
+        if (_checkUser()) {
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-            $data['title'] = 'Daftar Kehadiran Jemaat di '.$data['ibadah']['namaIbadah'].' - GKI Kebonagung Web Services';
+            $data['title'] = 'Daftar Kehadiran Jemaat di ' . $data['ibadah']['namaIbadah'] . ' - GKI Kebonagung Web Services';
             $data['jemaat'] = $this->m_kehadiran->semuaKehadiran($kodeIbadah);
 
             $this->load->view('Templates/vHeader', $data);
@@ -326,6 +339,60 @@ class Admin extends CI_Controller {
             $this->load->view('Admin/vAdminDaftarKehadiranJemaat');
             $this->load->view('Admin/vAdminMainFooter');
             $this->load->view('Templates/vFooter');
+        }
+    }
+
+    public function exportExcel($kodeIbadah)
+    {
+        if (_checkUser()) {
+            $kehadiran = $this->m_kehadiran->semuaKehadiran($kodeIbadah);
+            $ibadah = $this->m_ibadah->ambilIbadah($kodeIbadah);
+
+            require('./vendor/autoload.php');
+
+            $reader = IOFactory::createReader('Xlsx');
+            $spreadsheet = $reader->load('template.xlsx');
+
+            $spreadsheet->getProperties()->setCreator('mariohcay')
+                ->setTitle('Hasil Pemilu Majelis Jemaat GKJW Karangploso');
+
+            $styleArray = [
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                        'color' => ['argb' => 'FF000000'],
+                    ],
+                ],
+            ];
+
+            $filename = "Daftar Kehadiran Jemaat di " . $ibadah['namaIbadah'] . " - " . tgl_indo($ibadah['tanggalIbadah']);
+            $spreadsheet->setActiveSheetIndex(0)->getHeaderFooter()->setOddHeader('&C&B'.$filename);
+            $spreadsheet->setActiveSheetIndex(0)->getHeaderFooter()->setOddFooter('&LGKI KEBONAGUNG &RHalaman &P dari &N');
+
+            $row = 2;
+            foreach ($kehadiran as $data) {
+                $waktuDaftar = new DateTime($data['timeDaftar']);
+                $spreadsheet->setActiveSheetIndex(0);
+                $spreadsheet->getActiveSheet()->insertNewRowBefore($row + 1, 1);
+                $spreadsheet->setActiveSheetIndex(0)
+                    ->setCellValue('A' . $row, ($row - 1))
+                    ->setCellValue('B' . $row, $data['id'])
+                    ->setCellValue('C' . $row, $data['nama'])
+                    ->setCellValue('D' . $row, $data['jenisKelamin'])
+                    ->setCellValue('E' . $row, $data['status'])
+                    ->setCellValue('F' . $row, tgl_indo($waktuDaftar->format('Y-m-d')) . " - " . time_indo($waktuDaftar->format('H:i')) . " WIB")
+                    ->setCellValue('G' . $row, time_indo($data['timeHadir']) . " WIB");
+                $spreadsheet->setActiveSheetIndex(0)->getStyle('A' . $row . ':G' . $row)->applyFromArray($styleArray);
+                ++$row;
+            }
+
+            header('Content-Type: application/vnd.ms-excel');
+            header('Content-Disposition: attachment;filename='.$filename.'.xlsx');
+            header('Cache-Control: max-age=0');
+
+            $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+            $writer->save('php://output');
+            exit;
         }
     }
 }

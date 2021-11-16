@@ -12,7 +12,10 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800"><?= $ibadah['namaIbadah'] ?></h1>
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 text-gray-800"><?= $ibadah['namaIbadah'] . " - " . tgl_indo($ibadah['tanggalIbadah']); ?></h1>
+                <a href="<?= base_url('Admin/exportExcel/'.$ibadah['kodeIbadah'])?>" class="btn btn-success shadow-sm"><i class="fas fa-file-excel fa-sm text-white mr-1"></i> Export Excel</a>
+            </div>
 
             <!-- DataTales Example -->
             <?= $this->session->flashdata('message'); ?>
@@ -47,9 +50,9 @@
                                         <td><?= $data['lingkungan'] ?></td>
                                         <td><?= $data['status'] ?></td>
                                         <?php
-                                            $waktuDaftar = new DateTime($data['timeDaftar']);
+                                        $waktuDaftar = new DateTime($data['timeDaftar']);
                                         ?>
-                                        <td><?= tgl_indo($waktuDaftar->format('Y-m-d'))." - ".time_indo($waktuDaftar->format('H:i'))?> WIB</td>
+                                        <td><?= tgl_indo($waktuDaftar->format('Y-m-d')) . " - " . time_indo($waktuDaftar->format('H:i')) ?> WIB</td>
                                         <td><?= time_indo($data['timeHadir']) ?> WIB</td>
                                     </tr>
                                 <?php

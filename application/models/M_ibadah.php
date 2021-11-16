@@ -9,12 +9,12 @@ class M_ibadah extends CI_Model
 
     public function daftarIbadahMingguIni()
     {
-        return $this->db->query('SELECT * FROM tb_ibadah WHERE tanggalIbadah >= CURDATE()')->result_array();
+        return $this->db->query('SELECT * FROM tb_ibadah WHERE tanggalIbadah >= CURDATE() AND status = "BUKA" ORDER BY tanggalIbadah ASC')->result_array();
     }
 
     public function daftarIbadahSelesai()
     {
-        return $this->db->query('SELECT * FROM tb_ibadah WHERE tanggalIbadah <= CURDATE() ORDER BY tanggalIbadah DESC')->result_array();
+        return $this->db->query('SELECT * FROM tb_ibadah WHERE status = "SELESAI" ORDER BY tanggalIbadah DESC')->result_array();
     }
 
     public function ambilIbadah($kodeIbadah)

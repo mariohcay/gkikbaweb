@@ -11,9 +11,13 @@
                   </div>
                 </div>
                 <div class="col-lg">
+                  <?php $this->load->model('m_kehadiran');
+                  $terisi = $this->m_kehadiran->cekKuota($ibadah['kodeIbadah']);
+                  ?>
                   <h5 class="text-dark"><?= $ibadah['namaIbadah'] ?><br>"<?= $ibadah['temaIbadah'] ?>"</h5>
                   <h6><?= tgl_indo($ibadah['tanggalIbadah'], true) . " - " . time_indo($ibadah['jamIbadah']) . " WIB" ?></h6>
-                  <?php if ($ibadah['status'] === "SELESAI") { ?>
+                  <h6>Jumlah jemaat yang hadir: <?= $terisi ?></h6>
+                  <?php if ($ibadah['status'] === "SELESAI" and $terisi > 0) { ?>
                     <a href="<?= base_url('Admin/daftarKehadiranOnsite/') . $ibadah['kodeIbadah'] ?>" class="btn btn-success btn-sm p-2 my-1 mr-1">DAFTAR KEHADIRAN JEMAAT</a>
                   <?php } ?>
                 </div>

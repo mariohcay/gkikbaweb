@@ -39,6 +39,7 @@ class Fronts extends CI_Controller
         $date = new DateTime($this->input->post('tanggalLahir'));
         $result = $date->format('dmY');
         $id = "JM".(rand(1000, 9999)+(int)$result);
+        date_default_timezone_set("Asia/Jakarta");
         $jemaat = [
             'id' => $id,
             'nama' => ucwords(strtolower($this->input->post('nama'))),
@@ -46,7 +47,7 @@ class Fronts extends CI_Controller
             'lingkungan' => $this->input->post('lingkungan'),
             'kodeIbadah' => $kodeIbadah,
             'status' => "TERDAFTAR",
-            'timeDaftar' => date('d-m-Y H:i:s')
+            'timeDaftar' => date('Y-m-d H:i:s')
         ];
         $session = [
             'tanggalLahir' => $this->input->post('tanggalLahir'),

@@ -37,4 +37,9 @@ class M_kehadiran extends CI_Model
     public function hapusKehadiran($id, $kodeIbadah){
         $this->db->set('status', "TIDAK HADIR")->where(['id' => "$id", 'kodeIbadah' => "$kodeIbadah"])->update('tb_kehadiran');
     }
+
+    public function setTidakHadir()
+    {
+        $this->db->set('status', "TIDAK HADIR")->where('status', 'TERDAFTAR')->update('tb_kehadiran');
+    }
 }

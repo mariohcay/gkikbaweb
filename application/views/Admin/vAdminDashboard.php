@@ -34,17 +34,11 @@
             $terisi = $this->m_kehadiran->cekKuota($data['kodeIbadah']);
             ?>
             <h6>Kuota: <?= $terisi . "/" . $data['kuota'] ?></h6>
-            
-            <?php if ($data['status'] === "BUKA") { ?>
-              <a href="<?= base_url('Admin/scanQRCodeIbadah/') . $data['kodeIbadah'] ?>" class="btn btn-primary btn-sm p-2 my-1 mr-1">SCAN QR CODE</a>
-              <a href="<?= base_url('Admin/jemaatTerdaftar/') . $data['kodeIbadah'] ?>" class="btn btn-success btn-sm p-2 my-1 mr-1">JEMAAT TERDAFTAR</a>
-              <a href="<?= base_url('Admin/detailIbadah/') . $data['kodeIbadah'] ?>" class="btn btn-info btn-sm p-2 my-1 mr-1">DETAIL</a>
-              <br>
-              <a href="<?= base_url('Admin/tutupDaftarOnsite/') . $data['kodeIbadah'] ?>" class="btn btn-danger btn-sm p-2 my-1 mr-1">TUTUP PENDAFTARAN</a>
-            <?php } else { ?>
-              <a href="" class="btn btn-secondary disabled btn-sm p-2 my-1 mr-1">PENDAFTARAN TELAH DITUTUP</a>
-              <a href="<?= base_url('Admin/detailIbadah/') . $data['kodeIbadah'] ?>" class="btn btn-info btn-sm p-2 my-1 mr-1">DETAIL</a>
-            <?php } ?>
+            <a href="<?= base_url('Admin/scanQRCodeIbadah/') . $data['kodeIbadah'] ?>" class="btn btn-primary btn-sm p-2 my-1 mr-1">SCAN QR CODE</a>
+            <a href="<?= base_url('Admin/jemaatTerdaftar/') . $data['kodeIbadah'] ?>" class="btn btn-success btn-sm p-2 my-1 mr-1">JEMAAT TERDAFTAR</a>
+            <a href="<?= base_url('Admin/detailIbadah/') . $data['kodeIbadah'] ?>" class="btn btn-info btn-sm p-2 my-1 mr-1">DETAIL</a>
+            <br>
+            <a href="<?= base_url('Admin/tutupDaftarOnsite/') . $data['kodeIbadah'] ?>" class="btn btn-danger btn-sm p-2 my-1 mr-1">TUTUP PENDAFTARAN</a>
           </div>
         </div>
       <?php endforeach; ?>
