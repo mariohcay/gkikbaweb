@@ -45,7 +45,7 @@
                         <td><?= $data['nama'] ?></td>
                         <td><?= $data['jenisKelamin'] ?></td>
                         <td><?= $data['lingkungan'] ?></td>
-                        <td><a class="btn btn-danger" href="<?= base_url('Admin/hapusJemaatTerdaftarOnsite/') . $data['id'] . "/" . $ibadah['kodeIbadah'] . "/" . $data['nama']?>" onclick="return confirm('Yakin ingin menghapus <?= $data['nama']?> dari jemaat terdaftar?')">HAPUS</a></td>
+                        <td><a class="btn btn-danger" href="<?= base_url('Admin/hapusJemaatTerdaftarOnsite/') . $data['id'] . "/" . $ibadah['kodeIbadah']?>" onclick="return confirm('Yakin ingin menghapus <?= $data['nama']?> dari jemaat terdaftar?')">HAPUS</a></td>
                       </tr>
                     <?php
                       $i++;

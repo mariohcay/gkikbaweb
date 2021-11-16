@@ -9,7 +9,7 @@ class M_ibadah extends CI_Model
 
     public function daftarIbadahMingguIni()
     {
-        return $this->db->query('SELECT * FROM tb_ibadah WHERE tanggalIbadah > CURDATE()')->result_array();
+        return $this->db->query('SELECT * FROM tb_ibadah WHERE tanggalIbadah >= CURDATE()')->result_array();
     }
 
     public function daftarIbadahSelesai()
@@ -34,5 +34,10 @@ class M_ibadah extends CI_Model
     public function updateIbadah($kodeIbadah, $data)
     {
         $this->db->set($data)->where('kodeIbadah', $kodeIbadah)->update('tb_ibadah');
+    }
+
+    public function tutupDaftarOnsite($kodeIbadah)
+    {
+        $this->db->set('status', "SELESAI")->where('kodeIbadah', $kodeIbadah)->update('tb_ibadah');
     }
 }

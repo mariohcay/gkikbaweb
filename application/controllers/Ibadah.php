@@ -52,13 +52,15 @@ class Ibadah extends CI_Controller
     {
         if (_checkUser()) {
             $jemaat = $this->m_jemaat->ambilJemaatbyId($id);
+            date_default_timezone_set("Asia/Jakarta");
             $data = [
                 'id' => $id,
                 'nama' => $jemaat['nama'],
                 'jenisKelamin' => $jemaat['jenisKelamin'],
                 'lingkungan' => $jemaat['lingkungan'],
                 'kodeIbadah' => $kodeIbadah,
-                'status' => "TERDAFTAR"
+                'status' => "TERDAFTAR",
+                'timeDaftar' => date('Y-m-d H:i:s')
             ];
             $this->m_kehadiran->tambahKehadiran($data);
             redirect('Ibadah');
@@ -70,7 +72,7 @@ class Ibadah extends CI_Controller
         if (_checkUser()) {
             $data['title'] = 'Lihat Ibadah - GKI Kebonagung Web Services';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-
+            
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Main/vMainHeader');
             $this->load->view('Main/vLihatIbadah');

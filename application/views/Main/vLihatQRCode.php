@@ -17,7 +17,7 @@
               </div>
               <hr>
               <h5 class="text-dark"><?= $ibadah['namaIbadah'] ?><br>"<?= $ibadah['temaIbadah'] ?>"</h5>
-              <h6 style="font-size:13pt;"><?= tgl_indo($ibadah['tanggalIbadah'], true) . " - " . $ibadah['jamIbadah'] . " WIB" ?></h6>
+              <h6 style="font-size:13pt;"><?= tgl_indo($ibadah['tanggalIbadah'], true) . " - " . time_indo($ibadah['jamIbadah']) . " WIB" ?></h6>
               <pre><span style="font-family:nunito; font-size:13pt" class="text-gray-600"><?= $ibadah['deskripsi'] ?></span></pre>
             </div>
           </div>

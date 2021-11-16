@@ -45,7 +45,8 @@ class Fronts extends CI_Controller
             'jenisKelamin' => $this->input->post('jk'),
             'lingkungan' => $this->input->post('lingkungan'),
             'kodeIbadah' => $kodeIbadah,
-            'status' => "TERDAFTAR"
+            'status' => "TERDAFTAR",
+            'timeDaftar' => date('d-m-Y H:i:s')
         ];
         $session = [
             'tanggalLahir' => $this->input->post('tanggalLahir'),

@@ -41,30 +41,32 @@
                     <h6><?= tgl_indo($data['tanggalIbadah'], true) . " - " . time_indo($data['jamIbadah']) . " WIB" ?></h6>
                     <?php
                     $terisi = $this->m_kehadiran->cekKuota($data['kodeIbadah']);
+                    $id = $this->session->userdata('id');
+                    $kehadiran = $this->m_kehadiran->cekStatusKehadiran($id, $data['kodeIbadah']);
                     ?>
                     <h6><?php
                         $tersedia = $data['kuota'] - $terisi;
-                        if ($vaksin !== "Belum vaksin") {
-                          if ($tersedia > 0) {
-                            echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
-                          } else echo "<b class='text-danger'>Maaf kuota ibadah on-site sudah habis</b>";
+                        if ($vaksin !== "Belum vaksin") { // Jika sudah vaksin
+                          if (empty($kehadiran)) {
+                            if ($tersedia > 0) { //jika kuota masih ada
+                              echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
+                            } else { //jika kuota sudah habis
+                              echo "<b class='text-danger'>Mohon maaf kuota ibadah on-site sudah habis</b>";
+                            }
+                          }
+                        } else { //jika belum vaksin
+                          echo "<b class='text-danger'>Mohon maaf Anda belum mendapatkan vaksin sehingga belum bisa mengikuti ibadah on-site</b>";
                         }
                         ?></h6>
                     <?php
-                    $id = $this->session->userdata('id');
-                    $kehadiran = $this->m_kehadiran->cekStatusKehadiran($id, $data['kodeIbadah']);
-
-                    if ($vaksin !== "") { //jika data vaksin tidak kosong
+                    if ($vaksin !== "") { //jika data sudah lengkap
                       if ($vaksin !== "Belum vaksin") { //jika sudah vaksin
-                        if (!empty($kehadiran)) {
-                          if ($kehadiran['status'] === "TERDAFTAR") {
+                        if (!empty($kehadiran)) { //jika sudah mendaftar
+                          if ($kehadiran['status'] === "TERDAFTAR") { //jika sudah terdaftar
                             echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
-                          } else if ($kehadiran['status'] === "HADIR") {
+                          } else if ($kehadiran['status'] === "HADIR") { //jika sudah hadir
                             echo '<a href="#" class="btn btn-secondary btn-sm p-2 my-1 mr-1">ANDA SUDAH MENGIKUTI IBADAH</a>';
                           }
-                          // } else {
-                          //   echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
-                          // }
                         } else { //jika belum daftar
                           if ($tersedia > 0) { //jika kuota masih ada
                             echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2 my-1 mr-1">DAFTAR</a>';
@@ -76,6 +78,8 @@
                       } else { //jika belum vaksin
                         echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
                       }
+                    } else { //jika data belum lengkap
+                      echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
                     }
                     ?>
                   </div>

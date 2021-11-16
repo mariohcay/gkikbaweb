@@ -7,6 +7,10 @@ class M_kehadiran extends CI_Model
         $this->db->insert('tb_kehadiran', $data);
     }
 
+    public function semuaKehadiran($kodeIbadah){
+        return $this->db->get_where('tb_kehadiran', ['kodeIbadah' => $kodeIbadah])->result_array();
+    }
+    
     public function jemaatTerdaftar($kodeIbadah){
         return $this->db->get_where('tb_kehadiran', ['status' => "TERDAFTAR", 'kodeIbadah' => $kodeIbadah])->result_array();
     }
@@ -27,10 +31,10 @@ class M_kehadiran extends CI_Model
     public function updateKehadiran($id, $kodeIbadah){
         date_default_timezone_set('Asia/Jakarta');
         $time = date('H:i:s');
-        return $this->db->query("UPDATE tb_kehadiran SET time = '".$time."', status = 'HADIR' WHERE id = '".$id."' AND kodeIbadah = '".$kodeIbadah."'");
+        return $this->db->query("UPDATE tb_kehadiran SET timeHadir = '".$time."', status = 'HADIR' WHERE id = '".$id."' AND kodeIbadah = '".$kodeIbadah."'");
     }
 
     public function hapusKehadiran($id, $kodeIbadah){
-        $this->db->delete('tb_kehadiran', ['id' => "$id", 'kodeIbadah' => "$kodeIbadah"]);
+        $this->db->set('status', "TIDAK HADIR")->where(['id' => "$id", 'kodeIbadah' => "$kodeIbadah"])->update('tb_kehadiran');
     }
 }

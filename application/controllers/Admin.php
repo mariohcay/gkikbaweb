@@ -191,6 +191,9 @@ class Admin extends CI_Controller {
             $data['title'] = 'Detail Ibadah - GKI Kebonagung Web Services';
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
+            if($data['ibadah']['tanggalIbadah'] < date('Y-m-d') && $data['ibadah']['status'] === "BUKA"){
+                $this->m_ibadah->tutupDaftarOnsite($kodeIbadah);
+            }
             
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
@@ -274,7 +277,8 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function jemaatTerdaftar($kodeIbadah){
+    public function jemaatTerdaftar($kodeIbadah)
+    {
         if(_checkUser()){
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
@@ -289,11 +293,39 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function hapusJemaatTerdaftarOnsite($id, $kodeIbadah, $nama){
+    public function hapusJemaatTerdaftarOnsite($id, $kodeIbadah)
+    {
         if(_checkUser()){
             $this->m_kehadiran->hapusKehadiran($id, $kodeIbadah);
-            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>$nama berhasil dihapus dari jemaat terdaftar</small><i class="fa fa-check my-auto"></i></div>');
+            $nama = $this->m_jemaat->ambilJemaatbyId($id)['nama'];
+            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small><b>'.$nama.'</b> berhasil dihapus dari jemaat terdaftar</small><i class="fa fa-check my-auto"></i></div>');
             $this->jemaatTerdaftar($kodeIbadah);
+        }
+    }
+    
+    public function tutupDaftarOnsite($kodeIbadah)
+    {
+        if(_checkUser()){
+            $this->m_ibadah->tutupDaftarOnsite($kodeIbadah);
+            $namaIbadah = $this->m_ibadah->ambilIbadah($kodeIbadah)['namaIbadah'];
+            $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Pendaftaran <b>'.$namaIbadah.'</b> telah ditutup</small><i class="fa fa-check my-auto"></i></div>');
+            $this->daftarIbadah();
+        }
+    }
+
+    public function daftarKehadiranOnsite($kodeIbadah)
+    {
+        if(_checkUser()){
+            $data['category'] = 'Daftar Ibadah';
+            $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
+            $data['title'] = 'Daftar Kehadiran Jemaat di '.$data['ibadah']['namaIbadah'].' - GKI Kebonagung Web Services';
+            $data['jemaat'] = $this->m_kehadiran->semuaKehadiran($kodeIbadah);
+
+            $this->load->view('Templates/vHeader', $data);
+            $this->load->view('Admin/vAdminMainHeader');
+            $this->load->view('Admin/vAdminDaftarKehadiranJemaat');
+            $this->load->view('Admin/vAdminMainFooter');
+            $this->load->view('Templates/vFooter');
         }
     }
 }

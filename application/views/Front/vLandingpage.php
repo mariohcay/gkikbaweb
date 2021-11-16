@@ -34,7 +34,11 @@
                     <li class="nav-item"><a class="nav-link scroll" href="#galeri">Galeri</a></li>
                     <li class="nav-item"><a class="nav-link scroll" href="#download">Download</a></li>
                     <li class="nav-item"><a class="nav-link scroll" href="#kontak">Kontak</a></li>
-                    <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
+                    <?php if (!empty($this->session->userdata('username'))) { ?>
+                        <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Dashboard"><b>AKUN ANDA</b></a></li>
+                    <?php } else { ?>
+                        <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -64,7 +68,7 @@
                     <h2 class="text-white mt-0">Pengumuman Penting!</h2>
                     <hr class="divider divider-light" />
                     <p class="text-white-75 mb-5">
-                    Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: Prokes, sudah mendapatkan vaksin, berusia 13 – 70 tahun.</b> <br><br>Untuk ibadah mulai tanggal 14 November 2021, jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
+                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: Prokes, sudah mendapatkan vaksin, berusia 13 – 70 tahun.</b> <br><br>Untuk ibadah mulai tanggal 14 November 2021, jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
                     </p>
                     <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a>
                 </div>
@@ -272,7 +276,7 @@
     <!-- Kontak -->
     <section class="page-section" id="kontak">
         <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6 text-center">
                     <h2 class="mt-0">Hubungi Kami</h2>
                     <hr class="divider" />
