@@ -34,7 +34,11 @@
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#galeri">Galeri</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#download">Download</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#kontak">Kontak</a></li>
-                    <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
+                    <?php if (!empty($this->session->userdata('username'))) { ?>
+                        <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Dashboard"><b>AKUN ANDA</b></a></li>
+                    <?php } else { ?>
+                        <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
