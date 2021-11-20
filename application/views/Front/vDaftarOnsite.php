@@ -31,14 +31,14 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-lg-center">
                     <<li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#ibadah">Ibadah</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#galeri">Galeri</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#download">Download</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#kontak">Kontak</a></li>
-                    <?php if (!empty($this->session->userdata('username'))) { ?>
-                        <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Dashboard"><b>AKUN ANDA</b></a></li>
-                    <?php } else { ?>
-                        <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
-                    <?php } ?>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#galeri">Galeri</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#download">Download</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('Fronts/') ?>#kontak">Kontak</a></li>
+                        <?php if (!empty($this->session->userdata('username'))) { ?>
+                            <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Dashboard"><b>AKUN ANDA</b></a></li>
+                        <?php } else { ?>
+                            <li class="nav-item"><a class="btn btn-primary px-4 mx-lg-2" style="border-radius: 10rem; font-size: 11pt" href="<?= base_url() ?>Auth"><b>LOGIN</b></a></li>
+                        <?php } ?>
                 </ul>
             </div>
         </div>
@@ -48,7 +48,7 @@
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 justify-content-center mt-5">
                 <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0 text-white">Daftar Ibadah <i>On-site</i><br><?= tgl_indo($ibadah['tanggalIbadah'], true)?></h2>
+                    <h2 class="mt-0 text-white">Daftar Ibadah <i>On-site</i><br><?= tgl_indo($ibadah['tanggalIbadah'], true) ?></h2>
                     <hr class="divider" />
                     <p class="text-white mb-5">Silahkan Anda memasukkan data yang benar-benar valid</p>
                 </div>
@@ -56,17 +56,17 @@
             <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                 <div class="col-lg-6">
                     <?= $this->session->flashdata('message'); ?>
-                    <form method="POST" name="daftarOnsite" action="<?= base_url('Fronts/submitDaftarOnsite/'.$kodeIbadah) ?>">
+                    <form method="POST" name="daftarOnsite" action="<?= base_url('Fronts/submitDaftarOnsite/' . $kodeIbadah) ?>">
                         <div class="form-floating mb-3">
-                            <input class="form-control" name="nama" type="text" placeholder="Nama" required value="<?= $this->session->flashdata('nama');?>"/>
+                            <input class="form-control" name="nama" type="text" placeholder="Nama" required value="<?= $this->session->flashdata('nama'); ?>" />
                             <label for="name">Nama lengkap</label>
                         </div>
                         <div class="form-floating mb-3">
                             <div class="form-group">
                                 <select class="form-control" name="jk" required>
                                     <option value="" disabled selected>Jenis Kelamin...</option>
-                                    <option value="Laki-laki" <?php if ($this->session->flashdata('jenisKelamin') == "Laki-laki") echo "selected";?>>Laki-laki</option>
-                                    <option value="Perempuan" <?php if ($this->session->flashdata('jenisKelamin') == "Perempuan") echo "selected";?>>Perempuan</option>
+                                    <option value="Laki-laki" <?php if ($this->session->flashdata('jenisKelamin') == "Laki-laki") echo "selected"; ?>>Laki-laki</option>
+                                    <option value="Perempuan" <?php if ($this->session->flashdata('jenisKelamin') == "Perempuan") echo "selected"; ?>>Perempuan</option>
                                 </select>
                             </div>
                         </div>
@@ -74,26 +74,58 @@
                             <div class="form-group">
                                 <select class="form-control" name="lingkungan" required>
                                     <option value="" disabled selected>Lingkungan...</option>
-                                    <option value="A" <?php if ($this->session->flashdata('lingkungan') == "A") echo "selected";?>>A</option>
-                                    <option value="B" <?php if ($this->session->flashdata('lingkungan') == "B") echo "selected";?>>B</option>
-                                    <option value="C" <?php if ($this->session->flashdata('lingkungan') == "C") echo "selected";?>>C</option>
-                                    <option value="D" <?php if ($this->session->flashdata('lingkungan') == "D") echo "selected";?>>D</option>
-                                    <option value="E" <?php if ($this->session->flashdata('lingkungan') == "E") echo "selected";?>>E</option>
+                                    <option value="A" <?php if ($this->session->flashdata('lingkungan') == "A") echo "selected"; ?>>A</option>
+                                    <option value="B" <?php if ($this->session->flashdata('lingkungan') == "B") echo "selected"; ?>>B</option>
+                                    <option value="C" <?php if ($this->session->flashdata('lingkungan') == "C") echo "selected"; ?>>C</option>
+                                    <option value="D" <?php if ($this->session->flashdata('lingkungan') == "D") echo "selected"; ?>>D</option>
+                                    <option value="E" <?php if ($this->session->flashdata('lingkungan') == "E") echo "selected"; ?>>E</option>
                                     <option value="Simpatisan">Simpatisan</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" name="tanggalLahir" type="date" placeholder="Tanggal Lahir" max="<?= date('Y-m-d'); ?>" required value="<?= $this->session->flashdata('tanggalLahir');?>"/>
+                            <input class="form-control" name="tanggalLahir" type="date" placeholder="tanggal Lahir" max="<?= date('Y-m-d'); ?>" required value="<?= $this->session->flashdata('tanggalLahir'); ?>" />
                             <label for="tanggal Lahir">Tanggal Lahir</label>
                         </div>
+                        <!-- <div class="form-floating mb-3">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <select class="form-control" name="tanggal" required>
+                                            <option value="" disabled selected>Tanggal Lahir</option>
+                                            <?php for ($tgl = 1; $tgl <= 31; $tgl++) { ?>
+                                                <option value="<?= $tgl ?>" <?php if ($this->session->flashdata('lingkungan') == "A") echo "selected"; ?>><?= $tgl ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control" name="bulan" required>
+                                            <option value="" disabled selected>Bulan</option>
+                                            <?php
+                                            $bulan = array("1" => "Januari", "2" => "Februari", "3" => "Maret", "4" => "April", "5" => "Mei", "6" => "Juni", "7" => "Juli", "8" => "Agustus", "9" => "September", "10" => "Oktober", "11" => "November", "12" => "Desember");
+                                            for ($i = 1; $i <= 12; $i++) { ?>
+                                                <option value="<?= $bulan[$i] ?>" <?php if ($this->session->flashdata('lingkungan') == "A") echo "selected"; ?>><?= $bulan[$i] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control" name="tahun" required>
+                                            <option value="" disabled selected>Tahun</option>
+                                            <?php for ($tahun = 1900; $tahun <= date('Y'); $tahun++) { ?>
+                                                <option value="<?= $tahun ?>" <?php if ($this->session->flashdata('lingkungan') == "A") echo "selected"; ?>><?= $tahun ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                         <div class="form-floating mb-3">
                             <div class="form-group">
                                 <select class="form-control" name="vaksin" required>
                                     <option value="" disabled selected>Status vaksin...</option>
-                                    <option value="Belum vaksin" <?php if ($this->session->flashdata('vaksin') == "Belum vaksin") echo "selected";?>>Belum vaksin</option>
-                                    <option value="Sudah 1x" <?php if ($this->session->flashdata('vaksin') == "Sudah 1x") echo "selected";?>>Sudah 1x</option>
-                                    <option value="Sudah 2x" <?php if ($this->session->flashdata('vaksin') == "Sudah 2x") echo "selected";?>>Sudah 2x</option>
+                                    <option value="Belum vaksin" <?php if ($this->session->flashdata('vaksin') == "Belum vaksin") echo "selected"; ?>>Belum vaksin</option>
+                                    <option value="Sudah 1x" <?php if ($this->session->flashdata('vaksin') == "Sudah 1x") echo "selected"; ?>>Sudah 1x</option>
+                                    <option value="Sudah 2x" <?php if ($this->session->flashdata('vaksin') == "Sudah 2x") echo "selected"; ?>>Sudah 2x</option>
                                 </select>
                             </div>
                         </div>

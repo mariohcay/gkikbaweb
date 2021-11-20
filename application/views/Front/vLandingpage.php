@@ -101,7 +101,8 @@
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://youtu.be/KnfG9_mY-lk" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="<?= base_url() ?>Fronts/pilihOnsite" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Daftar</a>
+                                <a href="https://youtu.be/KnfG9_mY-lk" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
@@ -116,7 +117,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Surprise!"<br>Minggu, 21 November 2021 - 09.00 WIB <br>Kak Brina & Bu Datik</p>
+                                <p class="card-text">"Menyelesaikan Tugas"<br>Minggu, 21 November 2021 - 09.00 WIB <br>Kak Nella & Kak Nenes</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -129,22 +130,22 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://meet.google.com/uvu-aith-nsd" target="_blank" class="text-decoration-none">
+                            <a href="#" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/kpr.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Persekutuan KPR</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Gereja dalam Gereja"<br>Minggu, 21 November 2021 - 17.00 WIB <br>Pdt. Imanuel Gunawan Prasidi</p>
+                                <p class="card-text">"Cinta Gereja"<br>Minggu, 21 November 2021 - 17.00 WIB <br>Mas Irwan</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://meet.google.com/uvu-aith-nsd" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="#" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Onsite di Gereja</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->

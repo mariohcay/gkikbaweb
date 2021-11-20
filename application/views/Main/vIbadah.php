@@ -66,6 +66,7 @@
                             echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
                           } else if ($kehadiran['status'] === "HADIR") { //jika sudah hadir
                             echo '<a href="#" class="btn btn-secondary btn-sm p-2 my-1 mr-1">ANDA SUDAH MENGIKUTI IBADAH</a>';
+                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-info btn-sm p-2 my-1 mr-1">DETAIL</a>';
                           }
                         } else { //jika belum daftar
                           if ($tersedia > 0) { //jika kuota masih ada

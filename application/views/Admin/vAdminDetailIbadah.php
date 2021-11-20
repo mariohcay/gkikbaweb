@@ -1,7 +1,14 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <h1 class="h3 mb-4 text-gray-800"><?= $ibadah['namaIbadah'] ?></h1>
+          <div class="row mb-4">
+            <div class="col">
+              <h3 class="h3 text-gray-800 mb-1"><?= $ibadah['namaIbadah'];
+                                                echo "\n"; ?>
+                <h5><?= tgl_indo($ibadah['tanggalIbadah'], true) ?></h5>
+            </div>
+          </div>
+
           <div class="card shadow mb-4">
             <div class="card-body mr-4 px-4">
               <div class="row">

@@ -268,23 +268,29 @@ class Admin extends CI_Controller
         }
     }
 
-    public function tambahKehadiran($kodeIbadah)
+    public function tambahKehadiran($kodeIbadah, $id)
     {
         if (_checkUser()) {
-            $id = $this->input->post('qrcode');
-            $cek = $this->m_kehadiran->cekStatusKehadiran($id, $kodeIbadah);
+            if ($id === "none") {
+                $id = $this->input->post('qrcode');
+                $cek = $this->m_kehadiran->cekStatusKehadiran($id, $kodeIbadah);
 
-            if (empty($cek)) {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Data tidak ditemukan, kemungkinan Anda belum melakukan pendaftaran</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
-                $this->scanQRCodeIbadah($kodeIbadah);
-            } else {
-                if ($cek['status'] === "HADIR") {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Anda sudah melakukan scan QR Code sebelumnya</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+                if (empty($cek)) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Data tidak ditemukan, kemungkinan Anda belum melakukan pendaftaran</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+                    $this->scanQRCodeIbadah($kodeIbadah);
+                } else {
+                    if ($cek['status'] === "HADIR") {
+                        $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Anda sudah melakukan scan QR Code sebelumnya</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+                        $this->scanQRCodeIbadah($kodeIbadah);
+                    }
+                    $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Terima kasih, selamat beribadah, Tuhan Yesus memberkati :)</small><i class="fa fa-check my-auto"></i></div>');
+                    $this->m_kehadiran->updateKehadiran($id, $kodeIbadah);
                     $this->scanQRCodeIbadah($kodeIbadah);
                 }
+            } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Terima kasih, selamat beribadah, Tuhan Yesus memberkati :)</small><i class="fa fa-check my-auto"></i></div>');
                 $this->m_kehadiran->updateKehadiran($id, $kodeIbadah);
-                $this->scanQRCodeIbadah($kodeIbadah);
+                $this->jemaatTerdaftar($kodeIbadah);
             }
         }
     }
@@ -308,8 +314,8 @@ class Admin extends CI_Controller
     public function hapusJemaatTerdaftarOnsite($id, $kodeIbadah)
     {
         if (_checkUser()) {
-            $this->m_kehadiran->hapusKehadiran($id, $kodeIbadah);
             $nama = $this->m_jemaat->ambilJemaatbyId($id)['nama'];
+            $this->m_kehadiran->hapusKehadiran($id, $kodeIbadah);
             $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small><b>' . $nama . '</b> berhasil dihapus dari jemaat terdaftar</small><i class="fa fa-check my-auto"></i></div>');
             $this->jemaatTerdaftar($kodeIbadah);
         }
@@ -342,6 +348,66 @@ class Admin extends CI_Controller
         }
     }
 
+    public function tambahKehadiranOnsite($kodeIbadah)
+    {
+        if (_checkUser()) {
+            $data['category'] = 'Daftar Ibadah';
+            $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
+            $data['title'] = 'Daftar Kehadiran Jemaat di ' . $data['ibadah']['namaIbadah'] . ' - GKI Kebonagung Web Services';
+            
+            $this->load->view('Templates/vHeader', $data);
+            $this->load->view('Admin/vAdminMainHeader');
+            $this->load->view('Admin/vAdminTambahKehadiranOnsite');
+            $this->load->view('Admin/vAdminMainFooter');
+            $this->load->view('Templates/vFooter');
+        }
+    }
+
+    public function submitTambahKehadiran($kodeIbadah){
+        $data['title'] = "Daftar Ibadah Onsite - GKI Kebonagung";
+        $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
+
+        $date = new DateTime($this->input->post('tanggalLahir'));
+        $result = $date->format('dmY');
+        $id = "JM".(rand(1000, 9999)+(int)$result);
+        date_default_timezone_set("Asia/Jakarta");
+
+        $jemaat = [
+            'id' => $id,
+            'nama' => ucwords(strtolower($this->input->post('nama'))),
+            'jenisKelamin' => $this->input->post('jenisKelamin'),
+            'lingkungan' => $this->input->post('lingkungan'),
+            'kodeIbadah' => $kodeIbadah,
+            'status' => "HADIR",
+            'timeDaftar' => date('Y-m-d H:i:s'),
+            'timeHadir' => date('Y-m-d H:i:s')
+        ];
+        $session = [
+            'tanggalLahir' => $this->input->post('tanggalLahir'),
+            'vaksin' => $this->input->post('vaksin')
+        ];
+
+        $birthDate = $this->input->post('tanggalLahir');
+        $currentDate = date("d-m-Y");
+        $age = date_diff(date_create($birthDate), date_create($currentDate))->y;
+
+        if ($age < 13 || $age > 70) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia 13-70 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+            $this->session->set_flashdata($jemaat);
+            $this->session->set_flashdata($session);
+            redirect('Admin/tambahKehadiranOnsite/'.$kodeIbadah);
+        }
+        if ($this->input->post('vaksin') == "Belum vaksin"){
+            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena belum mendapatkan vaksin </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+            $this->session->set_flashdata($jemaat);
+            $this->session->set_flashdata($session);
+            redirect('Admin/tambahKehadiranOnsite/'.$kodeIbadah);
+        }
+        $this->m_kehadiran->tambahKehadiran($jemaat);
+        $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Terima kasih, selamat beribadah, Tuhan Yesus memberkati :)</small><i class="fa fa-check my-auto"></i></div>');
+        redirect('Admin/scanQRCodeIbadah/'.$kodeIbadah);
+    }
+
     public function exportExcel($kodeIbadah)
     {
         if (_checkUser()) {
@@ -366,7 +432,7 @@ class Admin extends CI_Controller
             ];
 
             $filename = "Daftar Kehadiran Jemaat di " . $ibadah['namaIbadah'] . " - " . tgl_indo($ibadah['tanggalIbadah']);
-            $spreadsheet->setActiveSheetIndex(0)->getHeaderFooter()->setOddHeader('&C&B'.$filename);
+            $spreadsheet->setActiveSheetIndex(0)->getHeaderFooter()->setOddHeader('&C&B' . $filename);
             $spreadsheet->setActiveSheetIndex(0)->getHeaderFooter()->setOddFooter('&LGKI KEBONAGUNG &RHalaman &P dari &N');
 
             $row = 2;
@@ -387,7 +453,7 @@ class Admin extends CI_Controller
             }
 
             header('Content-Type: application/vnd.ms-excel');
-            header('Content-Disposition: attachment;filename='.$filename.'.xlsx');
+            header('Content-Disposition: attachment;filename=' . $filename . '.xlsx');
             header('Cache-Control: max-age=0');
 
             $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
