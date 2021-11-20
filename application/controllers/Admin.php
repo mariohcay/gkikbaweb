@@ -314,7 +314,7 @@ class Admin extends CI_Controller
     public function hapusJemaatTerdaftarOnsite($id, $kodeIbadah)
     {
         if (_checkUser()) {
-            $nama = $this->m_jemaat->ambilJemaatbyId($id)['nama'];
+            $nama = $this->m_kehadiran->cekStatusKehadiran($id, $kodeIbadah)['nama'];
             $this->m_kehadiran->hapusKehadiran($id, $kodeIbadah);
             $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small><b>' . $nama . '</b> berhasil dihapus dari jemaat terdaftar</small><i class="fa fa-check my-auto"></i></div>');
             $this->jemaatTerdaftar($kodeIbadah);
