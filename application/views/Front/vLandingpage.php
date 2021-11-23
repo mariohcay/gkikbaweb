@@ -91,18 +91,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/KnfG9_mY-lk" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/9uo2yjzghXs" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Yesus Raja yang Sejati"<br>Minggu, 21 November 2021 - 07.00 WIB<br>Sdri. Nella Simamora</p>
+                                <p class="card-text">Ibadah Minggu Adven 1<br>"Berjaga-jaga dan Berdoalah"<br>Minggu, 28 November 2021 - 07.00 WIB<br>Pdt. Edi Wahono</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Daftar</a>
-                                <a href="https://youtu.be/KnfG9_mY-lk" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://youtu.be/9uo2yjzghXs" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
