@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-lg">
                   <?php $this->load->model('m_kehadiran');
-                    $hadir = count($this->m_kehadiran->jemaatHadir($data['kodeIbadah']));
+                    $hadir = count($this->m_kehadiran->jemaatHadir($ibadah['kodeIbadah']));
                   ?>
                   <h5 class="text-dark"><?= $ibadah['namaIbadah'] ?><br>"<?= $ibadah['temaIbadah'] ?>"</h5>
                   <h6><?= tgl_indo($ibadah['tanggalIbadah'], true) . " - " . time_indo($ibadah['jamIbadah']) . " WIB" ?></h6>
