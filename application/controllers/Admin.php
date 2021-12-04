@@ -354,7 +354,7 @@ class Admin extends CI_Controller
             $data['category'] = 'Daftar Ibadah';
             $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
             $data['title'] = 'Daftar Kehadiran Jemaat di ' . $data['ibadah']['namaIbadah'] . ' - GKI Kebonagung Web Services';
-            
+
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
             $this->load->view('Admin/vAdminTambahKehadiranOnsite');
@@ -363,49 +363,58 @@ class Admin extends CI_Controller
         }
     }
 
-    public function submitTambahKehadiran($kodeIbadah){
-        $data['title'] = "Daftar Ibadah Onsite - GKI Kebonagung";
+    public function submitTambahKehadiran($kodeIbadah)
+    {
         $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-
-        $date = new DateTime($this->input->post('tanggalLahir'));
-        $result = $date->format('dmY');
-        $id = "JM".(rand(1000, 9999)+(int)$result);
         date_default_timezone_set("Asia/Jakarta");
+
+        $nama = ucwords(strtolower($this->input->post('nama')));
+        $tanggalLahir = $this->input->post('tanggalLahir');
+        $lingkungan = $this->input->post('lingkungan');
+
+        $date = new DateTime($tanggalLahir);
+        $result = $date->format('dmY');
+        $id = "JM" . (rand(1000, 9999) + (int)$result);
 
         $jemaat = [
             'id' => $id,
-            'nama' => ucwords(strtolower($this->input->post('nama'))),
+            'nama' => $nama,
+            // 'tanggalLahir' => $tanggalLahir,
             'jenisKelamin' => $this->input->post('jenisKelamin'),
-            'lingkungan' => $this->input->post('lingkungan'),
+            'lingkungan' => $lingkungan,
+            // 'vaksin' => $this->input->post('vaksin'),
             'kodeIbadah' => $kodeIbadah,
             'status' => "HADIR",
             'timeDaftar' => date('Y-m-d H:i:s'),
             'timeHadir' => date('Y-m-d H:i:s')
         ];
-        $session = [
-            'tanggalLahir' => $this->input->post('tanggalLahir'),
-            'vaksin' => $this->input->post('vaksin')
-        ];
 
-        $birthDate = $this->input->post('tanggalLahir');
-        $currentDate = date("d-m-Y");
-        $age = date_diff(date_create($birthDate), date_create($currentDate))->y;
+        $usia = date_diff(date_create($tanggalLahir), date_create(date("d-m-Y")))->y;
 
-        if ($age < 13 || $age > 70) {
+        if ($usia < 13 || $usia > 70) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia 13-70 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
             $this->session->set_flashdata($jemaat);
-            $this->session->set_flashdata($session);
-            redirect('Admin/tambahKehadiranOnsite/'.$kodeIbadah);
+            redirect('Admin/tambahKehadiranOnsite/' . $kodeIbadah);
         }
-        if ($this->input->post('vaksin') == "Belum vaksin"){
+        if ($this->input->post('vaksin') == "Belum vaksin") {
             $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena belum mendapatkan vaksin </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
             $this->session->set_flashdata($jemaat);
-            $this->session->set_flashdata($session);
-            redirect('Admin/tambahKehadiranOnsite/'.$kodeIbadah);
+            redirect('Admin/tambahKehadiranOnsite/' . $kodeIbadah);
         }
         $this->m_kehadiran->tambahKehadiran($jemaat);
         $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> <small>Terima kasih, selamat beribadah, Tuhan Yesus memberkati :)</small><i class="fa fa-check my-auto"></i></div>');
-        redirect('Admin/scanQRCodeIbadah/'.$kodeIbadah);
+        redirect('Admin/scanQRCodeIbadah/' . $kodeIbadah);
+
+        // $cek = $this->m_kehadiran->cekJemaatTerdaftar($kodeIbadah, $nama, $tanggalLahir, $lingkungan);
+    
+
+        // if ($cek > 0) {
+        //     $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf, nama Anda sudah terdaftar dalam ibadah <i>on-site</i> kali ini dan tidak bisa mendaftar lagi</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+        //     $this->session->set_flashdata($jemaat);
+        //     redirect('Admin/tambahKehadiranOnsite/' . $kodeIbadah);
+        // } else {
+            
+        // }
     }
 
     public function exportExcel($kodeIbadah)
@@ -445,10 +454,11 @@ class Admin extends CI_Controller
                     ->setCellValue('B' . $row, $data['id'])
                     ->setCellValue('C' . $row, $data['nama'])
                     ->setCellValue('D' . $row, $data['jenisKelamin'])
-                    ->setCellValue('E' . $row, $data['status'])
-                    ->setCellValue('F' . $row, tgl_indo($waktuDaftar->format('Y-m-d')) . " - " . time_indo($waktuDaftar->format('H:i')) . " WIB")
-                    ->setCellValue('G' . $row, time_indo($data['timeHadir']) . " WIB");
-                $spreadsheet->setActiveSheetIndex(0)->getStyle('A' . $row . ':G' . $row)->applyFromArray($styleArray);
+                    ->setCellValue('E' . $row, $data['lingkungan'])
+                    ->setCellValue('F' . $row, $data['status'])
+                    ->setCellValue('G' . $row, tgl_indo($waktuDaftar->format('Y-m-d')) . " - " . time_indo($waktuDaftar->format('H:i')) . " WIB")
+                    ->setCellValue('H' . $row, time_indo($data['timeHadir']) . " WIB");
+                $spreadsheet->setActiveSheetIndex(0)->getStyle('A' . $row . ':H' . $row)->applyFromArray($styleArray);
                 ++$row;
             }
 

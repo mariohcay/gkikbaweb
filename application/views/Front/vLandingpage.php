@@ -91,18 +91,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/9uo2yjzghXs" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/jh_AzVXmwpM" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">Ibadah Minggu Adven 1<br>"Berjaga-jaga dan Berdoalah"<br>Minggu, 28 November 2021 - 07.00 WIB<br>Pdt. Edi Wahono</p>
+                                <p class="card-text">Ibadah Minggu Adven II<br>"Persiapkan Diri untuk Tuhan"<br>Minggu, 5 Desember 2021 - 07.00 WIB<br>Pdt. Martin K. Nugroho</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Daftar</a>
-                                <a href="https://youtu.be/9uo2yjzghXs" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://youtu.be/jh_AzVXmwpM" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Menyelesaikan Tugas"<br>Minggu, 21 November 2021 - 09.00 WIB<br>Kak Nella & Kak Nenes</p>
+                                <p class="card-text">"Berharap Hanya kepada Tuhan"<br>Minggu, 5 Desember 2021 - 09.00 WIB<br>Kak Nenes & Kak Brina</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -136,7 +136,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Persekutuan KPR</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Cinta Gereja"<br>Minggu, 21 November 2021 - 17.00 WIB<br>Mas Irwan</p>
+                                <p class="card-text">"Tuhan Beserta yang Tersisih"<br>Minggu, 5 Desember 2021 - 17.00 WIB<br>Pdt. Martin K. Nugroho</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -251,7 +251,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 21 November 2021">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 5 Desember 2021">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -263,7 +263,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 21 November 2021"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 5 Desember 2021"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
                         </a>

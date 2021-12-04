@@ -46,8 +46,6 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container px-4 px-lg-5 h-100">
-            
-            
             <div class="row gx-4 gx-lg-5 justify-content-center mt-5">
                 <div class="col-lg-8 col-xl-6 text-center">
                 <?php if (!empty($ibadah)) { ?>

@@ -28,6 +28,19 @@ class M_kehadiran extends CI_Model
         return count($this->db->get_where('tb_kehadiran', ['kodeIbadah' => $kodeIbadah])->result_array());
     }
 
+    // public function cekJemaatTerdaftar($kodeIbadah, $name, $tanggalLahir, $lingkungan)
+    // {
+    //     $nama = explode(" ", $name);
+    //     $result = 0;
+    //     foreach ($nama as $nm){
+    //         $cek = $this->db->query("SELECT * FROM tb_kehadiran WHERE kodeIbadah = '".$kodeIbadah."' AND nama LIKE '%".$nm."%' AND tanggalLahir = '".$tanggalLahir."' AND lingkungan = '".$lingkungan."'")->row_array();
+    //         if(!empty($cek)){
+    //             $result += 1;
+    //         }
+    //     } 
+    //     return $result;
+    // }
+
     public function updateKehadiran($id, $kodeIbadah){
         date_default_timezone_set('Asia/Jakarta');
         $time = date('H:i:s');
