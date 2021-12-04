@@ -406,14 +406,14 @@ class Admin extends CI_Controller
         redirect('Admin/scanQRCodeIbadah/' . $kodeIbadah);
 
         // $cek = $this->m_kehadiran->cekJemaatTerdaftar($kodeIbadah, $nama, $tanggalLahir, $lingkungan);
-    
+
 
         // if ($cek > 0) {
         //     $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf, nama Anda sudah terdaftar dalam ibadah <i>on-site</i> kali ini dan tidak bisa mendaftar lagi</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
         //     $this->session->set_flashdata($jemaat);
         //     redirect('Admin/tambahKehadiranOnsite/' . $kodeIbadah);
         // } else {
-            
+
         // }
     }
 
@@ -441,6 +441,8 @@ class Admin extends CI_Controller
             ];
 
             $filename = "Daftar Kehadiran Jemaat di " . $ibadah['namaIbadah'] . " - " . tgl_indo($ibadah['tanggalIbadah']);
+            $spreadsheet->getActiveSheet()->getPageSetup()
+                ->setOrientation(\PhpOffice\PhpSpreadsheet\Worksheet\PageSetup::ORIENTATION_LANDSCAPE);
             $spreadsheet->setActiveSheetIndex(0)->getHeaderFooter()->setOddHeader('&C&B' . $filename);
             $spreadsheet->setActiveSheetIndex(0)->getHeaderFooter()->setOddFooter('&LGKI KEBONAGUNG &RHalaman &P dari &N');
 
