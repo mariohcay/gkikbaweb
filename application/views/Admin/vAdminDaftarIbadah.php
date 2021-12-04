@@ -67,13 +67,13 @@
                   </thead>
                   <tbody>
                     <?php foreach ($ibadah as $data) :
-                      $terisi = $this->m_kehadiran->cekKuota($data['kodeIbadah']);
+                      $hadir = count($this->m_kehadiran->jemaatHadir($data['kodeIbadah']));
                     ?>
                       <tr>
                         <td><img class="img-responsive shadow" style="width: 10rem;" src="<?= base_url('assets/img/thumbnail/') . $data['image'] ?>" alt=""></td>
                         <td><?= $data['namaIbadah'] ?><br>"<?= $data['temaIbadah'] ?>"</td>
                         <td><?= tgl_indo($data['tanggalIbadah']) ?></td>
-                        <td><?= $terisi ?></td>
+                        <td><?= $hadir ?></td>
                         <td><a href="<?= base_url('Admin/detailIbadah/') . $data['kodeIbadah'] ?>" class="btn btn-info btn-sm p-2">DETAIL</a></td>
                       </tr>
                     <?php endforeach; ?>
