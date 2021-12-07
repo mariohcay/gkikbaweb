@@ -48,7 +48,7 @@
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 justify-content-center mt-5">
                 <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0 text-white">Daftar Ibadah <i>On-site</i><br><?= tgl_indo($ibadah['tanggalIbadah'], true) ?></h2>
+                    <h2 class="mt-0 text-white">Pendaftaran Ibadah <i>On-site</i><br><?= tgl_indo($ibadah['tanggalIbadah'], true) ?></h2>
                     <hr class="divider" />
                     <p class="text-white mb-5">Silahkan Anda memasukkan data yang benar-benar valid</p>
                 </div>

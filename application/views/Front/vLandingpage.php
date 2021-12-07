@@ -97,12 +97,12 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">Ibadah Minggu Adven II<br>"Persiapkan Diri untuk Tuhan"<br>Minggu, 5 Desember 2021 - 07.00 WIB<br>Pdt. Martin K. Nugroho</p>
+                                <p class="card-text">Ibadah Minggu Adven III<br>"Spiritualitas Pertobatan dan Kebaikan Hati"<br>Minggu, 12 Desember 2021 - 07.00 WIB<br>Pdt. Iston Umbu Kuralena</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="<?= base_url() ?>Fronts/pilihOnsite" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Daftar</a>
-                                <a href="https://youtu.be/jh_AzVXmwpM" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
+                                <a href="https://youtu.be/jh_AzVXmwpM" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
