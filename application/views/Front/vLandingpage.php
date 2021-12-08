@@ -97,7 +97,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">Ibadah Minggu Adven III<br>"Spiritualitas Pertobatan dan Kebaikan Hati"<br>Minggu, 12 Desember 2021 - 07.00 WIB<br>Pdt. Iston Umbu Kuralena</p>
+                                <p class="card-text">Ibadah Minggu Adven III<br>"Spiritualitas Pertobatan dan Kebaikan Hati"<br>Minggu, 12 Desember 2021 - 07.00 WIB<br>Pdt. Iston Umbu</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
