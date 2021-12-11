@@ -136,7 +136,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Persekutuan KPR</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Saat Tuhan Bersama Kita"<br>Minggu, 12 Desember 2021 - 17.00 WIB<br>Sdri. Agnes Kristanti N.</p>
+                                <p class="card-text">"Saat Tuhan Bersama Kita"<br>Minggu, 12 Desember 2021 - 16.00 WIB<br>Sdri. Agnes Kristanti N.</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
