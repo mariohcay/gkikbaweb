@@ -78,7 +78,7 @@
                                 <!-- UBAH -->
 
                                 <p class="card-text">
-                                    <?= tgl_indo($data['tanggalIbadah'])?><br>
+                                    <?= tgl_indo($data['tanggalIbadah'], true)?><br>
                                     "<?= $data['temaIbadah'] ?>"<br>
                                     Pukul <?= time_indo($data['jamIbadah']) ?> WIB <br>
                                     <?php
