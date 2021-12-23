@@ -68,7 +68,11 @@
                     <h2 class="text-white mt-0">Pengumuman Penting!</h2>
                     <hr class="divider divider-light" />
                     <p class="text-white-75 mb-5">
-                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: Prokes, sudah mendapatkan vaksin, berusia 13 – 70 tahun.</b> <br><br>Untuk ibadah mulai tanggal 21 November 2021, jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
+                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: Prokes, sudah mendapatkan vaksin, berusia 13 – 70 tahun.</b><br><br>
+                        
+                        Untuk ibadah mulai tanggal 21 November 2021, jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
+
+                        <b>Ibadah Minggu, 26 Desember 2021 tidak diselenggarakan</b>, jemaat dapat mengikuti ibadah secara online melalui kanal Youtube YKB GKI TV atau kanal Youtube GKI di Malang Raya.
                     </p>
                     <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a>
                 </div>
@@ -91,23 +95,43 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/bY0G_OXzdRM" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/C7hmTXZIkXE" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Ibadah Umum</h4>
+                                <h4 class="card-title">Ibadah Malam Natal</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">Ibadah Minggu Adven IV<br>"Sukacita Menyambut Sang Juruselamat"<br>Minggu, 19 Desember 2021 - 07.00 WIB<br>Pdt. Imanuel Gunawan Prasidi</p>
+                                <p class="card-text">"Kelahiran yang Membebaskan"<br>Jumat, 24 Desember 2021 - 18.00 WIB<br>Sdri. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/bY0G_OXzdRM" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/C7hmTXZIkXE" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4">
+                    <div class="mt-5">
+                        <div class="card text-center shadow mx-3">
+                            <!-- UBAH -->
+                            <a href="https://youtu.be/tAk-jLrIzJE" target="_blank" class="text-decoration-none">
+                                <img src="<?= base_url() ?>front/assets/img/umum2.jpg" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">Ibadah Natal</h4>
+                                <!-- UBAH -->
+                                <p class="card-text">"Sang Logos Menjadikan Kita Hidup Bersama Sebagai Anak-anak Allah"<br>Sabtu, 25 Desember 2021 - 07.00 WIB<br>Sdri. Nella Simamora</p>
+                            </div>
+                            <div class="card-body">
+                                <!-- UBAH -->
+                                <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
+                                <a href="https://youtu.be/tAk-jLrIzJE" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
@@ -115,9 +139,9 @@
                                 <img src="<?= base_url() ?>front/assets/img/ka.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Sekolah Minggu</h4>
+                                <h4 class="card-title">Ibadah Natal Komisi Anak</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Kecil Tapi Berharga"<br>Minggu, 19 Desember 2021 - 09.00 WIB<br>Kak Lia & Bu Datik</p>
+                                <p class="card-text">"Campur Tangan Tuhan"<br>Minggu, 26 Desember 2021 - 19.00 WIB<br>Sdri. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -126,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->

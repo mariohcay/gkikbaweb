@@ -65,7 +65,7 @@
                     <div class="<?php if (count($ibadah) > 2) {
                                     echo "col-lg-4";
                                 } else echo "col-lg-6" ?>">
-                        <div class="card text-center shadow mx-3">
+                        <div class="card text-center shadow mx-3 mb-sm-4">
                             <?php
                             $terisi = $this->m_kehadiran->cekKuota($data['kodeIbadah']);
                             ?>

@@ -391,8 +391,8 @@ class Admin extends CI_Controller
 
         $usia = date_diff(date_create($tanggalLahir), date_create(date("d-m-Y")))->y;
 
-        if ($usia < 13 || $usia > 70) {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia 13-70 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+        if ($usia < 13) { // || $usia > 70
+            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia minimal 13 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
             $this->session->set_flashdata($jemaat);
             redirect('Admin/tambahKehadiranOnsite/' . $kodeIbadah);
         }

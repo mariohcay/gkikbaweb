@@ -56,8 +56,8 @@ class Fronts extends CI_Controller
         $birthDate = $this->input->post('tanggalLahir');
         $currentDate = date("d-m-Y");
         $age = date_diff(date_create($birthDate), date_create($currentDate))->y;
-        if ($age < 13 || $age > 70) {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia 13-70 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+        if ($age < 13) { // || $age > 70
+            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia minimal 13 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
             $this->session->set_flashdata($jemaat);
             $this->session->set_flashdata($session);
             redirect('Fronts/daftarOnsite/'.$kodeIbadah);
