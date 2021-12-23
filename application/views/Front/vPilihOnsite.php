@@ -77,7 +77,10 @@
                                 <h4 class="card-title"><?= $data['namaIbadah'] ?></h4>
                                 <!-- UBAH -->
 
-                                <p class="card-text">"<?= $data['temaIbadah'] ?>"<br>Pukul <?= time_indo($data['jamIbadah']) ?> WIB <br>
+                                <p class="card-text">
+                                    <?= tgl_indo($data['tanggalIbadah'])?><br>
+                                    "<?= $data['temaIbadah'] ?>"<br>
+                                    Pukul <?= time_indo($data['jamIbadah']) ?> WIB <br>
                                     <?php
                                     $tersedia = $data['kuota'] - $terisi;
                                     if ($tersedia > 0) {
