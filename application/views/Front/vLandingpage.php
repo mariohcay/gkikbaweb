@@ -70,9 +70,7 @@
                     <p class="text-white-75 mb-5">
                         Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: Prokes, sudah mendapatkan vaksin, berusia 13 – 70 tahun.</b><br><br>
                         
-                        Untuk ibadah mulai tanggal 21 November 2021, jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
-
-                        <b>Ibadah Minggu, 26 Desember 2021 tidak diselenggarakan</b>, jemaat dapat mengikuti ibadah secara online melalui kanal Youtube YKB GKI TV atau kanal Youtube GKI di Malang Raya.
+                        Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
                     </p>
                     <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a>
                 </div>

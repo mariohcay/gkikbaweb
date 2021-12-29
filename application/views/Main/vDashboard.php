@@ -58,20 +58,24 @@
                     <?php
                     if ($vaksin !== "") { //jika data sudah lengkap
                       if ($vaksin !== "Belum vaksin") { //jika sudah vaksin
-                        if (!empty($kehadiran)) { //jika sudah mendaftar
-                          if ($kehadiran['status'] === "TERDAFTAR") { //jika sudah terdaftar
-                            echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
-                          } else if ($kehadiran['status'] === "HADIR") { //jika sudah hadir
-                            echo '<a href="#" class="btn btn-secondary btn-sm p-2 my-1 mr-1">ANDA SUDAH MENGIKUTI IBADAH</a>';
-                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-info btn-sm p-2 my-1 mr-1">DETAIL</a>';
+                        if ($age >= 13 && $age <= 70) { //jika cukup umur
+                          if (!empty($kehadiran)) { //jika sudah mendaftar
+                            if ($kehadiran['status'] === "TERDAFTAR") { //jika sudah terdaftar
+                              echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
+                            } else if ($kehadiran['status'] === "HADIR") { //jika sudah hadir
+                              echo '<a href="#" class="btn btn-secondary btn-sm p-2 my-1 mr-1">ANDA SUDAH MENGIKUTI IBADAH</a>';
+                              echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-info btn-sm p-2 my-1 mr-1">DETAIL</a>';
+                            }
+                          } else { //jika belum daftar
+                            if ($tersedia > 0) { //jika kuota masih ada
+                              echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2 my-1 mr-1">DAFTAR</a>';
+                              echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
+                            } else { //jika kuota habis
+                              echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
+                            }
                           }
-                        } else { //jika belum daftar
-                          if ($tersedia > 0) { //jika kuota masih ada
-                            echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2 my-1 mr-1">DAFTAR</a>';
-                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
-                          } else { //jika kuota habis
-                            echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
-                          }
+                        } else { //jika tidak cukup umur
+                          echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
                         }
                       } else { //jika belum vaksin
                         echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
