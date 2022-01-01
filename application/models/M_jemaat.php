@@ -7,14 +7,9 @@ class M_jemaat extends CI_Model
         return $this->db->get('tb_jemaat')->result_array();
     }
 
-    public function lakiLaki()
+    public function daftarJemaatByJK($jenisKelamin)
     {
-        return $this->db->get_where('jemaat', ['jk' => 'Laki-laki'])->result_array();
-    }
-
-    public function perempuan()
-    {
-        return $this->db->get_where('jemaat', ['jk' => 'Perempuan'])->result_array();
+        return $this->db->get_where('tb_jemaat', ['jenisKelamin' => $jenisKelamin])->result_array();
     }
 
     public function ambilJemaat($user)

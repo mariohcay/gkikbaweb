@@ -93,38 +93,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/C7hmTXZIkXE" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/EVt963WDiVw" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Ibadah Malam Natal</h4>
+                                <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Kelahiran yang Membebaskan"<br>Jumat, 24 Desember 2021 - 18.00 WIB<br>Sdri. Nella Simamora</p>
+                                <p class="card-text">"Kasih Karunia yang Selalu Baru"<br>Minggu, 22 Januari 2022 - 07.00 WIB<br>Sdri. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/C7hmTXZIkXE" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="mt-5">
-                        <div class="card text-center shadow mx-3">
-                            <!-- UBAH -->
-                            <a href="https://youtu.be/tAk-jLrIzJE" target="_blank" class="text-decoration-none">
-                                <img src="<?= base_url() ?>front/assets/img/umum2.jpg" class="card-img-top">
-                            </a>
-                            <div class="card-body">
-                                <h4 class="card-title">Ibadah Natal</h4>
-                                <!-- UBAH -->
-                                <p class="card-text">"Sang Logos Menjadikan Kita Hidup Bersama Sebagai Anak-anak Allah"<br>Sabtu, 25 Desember 2021 - 07.00 WIB<br>Sdri. Nella Simamora</p>
-                            </div>
-                            <div class="card-body">
-                                <!-- UBAH -->
-                                <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/tAk-jLrIzJE" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/EVt963WDiVw" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>

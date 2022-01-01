@@ -21,7 +21,7 @@
   <link href="<?= base_url() ?>/assets/css/sb-admin-2.min.css" rel="stylesheet">
 
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet" /> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet" />
   <style>
     .responsive-container {
       position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;

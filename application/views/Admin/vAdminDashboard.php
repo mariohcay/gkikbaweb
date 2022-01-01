@@ -1,8 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
-
-<!-- <script src="<?= base_url() ?>/assets/js/demo/chart-area-demo.js"></script> -->
 
 <div class="container-fluid">
 
@@ -47,11 +44,11 @@
 
   <div class="row">
     <div class="col mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
+      <div class="card border-left-dark shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Jumlah Jemaat</div>
+              <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Jumlah Jemaat</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= sizeof($jemaat) ?></div>
             </div>
             <div class="col-auto">
@@ -62,9 +59,7 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- <div class="row">
     <div class="col mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
@@ -80,9 +75,7 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
     <div class="col mb-4">
       <div class="card border-left-danger shadow h-100 py-2">
         <div class="card-body">
@@ -98,27 +91,24 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
-
-  <!-- <div class="row">
+  <div class="row">
 
     <div class="col-md">
-      <div class="card shadow mb-4">
-        
+      <div class="card shadow mb-4 h-auto">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-info">Transaksi Iklan Baris</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Kehadiran Jemaat</h6>
         </div>
-        
         <div class="card-body">
-          <div class="chart-area">
-            <canvas id="myChart" height="94%"></canvas>
+          <div class="chart-area" style="height: 500px">
+            <canvas id="myChart"></canvas>
           </div>
         </div>
       </div>
     </div>
 
-  </div> -->
+  </div>
 
 </div>
 <!-- /.container-fluid -->
@@ -126,31 +116,130 @@
 </div>
 <!-- End of Main Content -->
 
-<!-- <script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var cData = JSON.parse(`<?php echo $iklanBulanan; ?>`);
-var myChart = new Chart(ctx, {
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var cData = JSON.parse('<?php echo $kehadiran; ?>');
+  var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: cData.label,
-        datasets: [{
-            data: cData.data,
-            borderColor: 'rgba(91,192,222)',
-            pointBackgroundColor: 'rgba(91,192,222)',
-            borderWidth: 2
-        }]
+      labels: cData.label,
+      datasets: [{
+          data: cData.data,
+          label: "Total",
+          lineTension: 0.3,
+          backgroundColor: "rgba(90, 92, 105, 0.05)",
+          borderColor: "rgba(90, 92, 105, 1)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(90, 92, 105, 1)",
+          pointBorderColor: "rgba(90, 92, 105, 1)",
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: "rgba(90, 92, 105, 1)",
+          pointHoverBorderColor: "rgba(90, 92, 105, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          pointStyle: 'circle',
+        },
+        {
+          data: cData.data2,
+          label: "Laki-laki",
+          lineTension: 0.3,
+          backgroundColor: "rgba(78, 115, 223, 0.05)",
+          borderColor: "rgba(78, 115, 223, 1)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointBorderColor: "rgba(78, 115, 223, 1)",
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          pointStyle: 'circle',
+        },
+        {
+          data: cData.data3,
+          label: "Perempuan",
+          lineTension: 0.3,
+          backgroundColor: "rgba(231, 74, 59, 0.05)",
+          borderColor: "rgba(231, 74, 59, 1)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(231, 74, 59, 1)",
+          pointBorderColor: "rgba(231, 74, 59, 1)",
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: "rgba(231, 74, 59, 1)",
+          pointHoverBorderColor: "rgba(231, 74, 59, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          pointStyle: 'circle',
+        }
+      ]
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: {
+        autoPadding: true
+        // padding: {
+        //   left: 10,
+        //   right: 10,
+        //   top: 25,
+        //   bottom: 10
+        // }
+      },
+      scales: {
+        xAxes: [{
+          gridLines: {
+            display: false,
+            drawBorder: false
+          },
+          ticks: {
+            padding: 15
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            maxTicksLimit: 10,
+            padding: 15
+          },
+          gridLines: {
+            color: "rgb(234, 236, 244)",
+            zeroLineColor: "rgb(234, 236, 244)",
+            drawBorder: false,
+            borderDash: [2],
+            zeroLineBorderDash: [2]
+          }
+        }],
+      },
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          usePointStyle: true,
+          padding: 25
         },
-        legend: {
-          display: false
+      },
+      tooltips: {
+        backgroundColor: "rgb(255,255,255)",
+        bodyFontColor: "#858796",
+        titleMarginBottom: 10,
+        titleFontColor: '#6e707e',
+        titleFontSize: 14,
+        borderColor: '#dddfeb',
+        borderWidth: 1,
+        xPadding: 15,
+        yPadding: 15,
+        displayColors: false,
+        intersect: false,
+        mode: 'index',
+        caretPadding: 10,
+        callbacks: {
+          label: function(tooltipItem, chart) {
+            var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+            return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+          }
         }
+      }
     }
-});
-</script> -->
+  });
+</script>
+<script src="<?= base_url() ?>/assets/js/demo/chart-area-demo.js"></script>

@@ -21,7 +21,29 @@ class Admin extends CI_Controller
             $data['title'] = 'Admin Dashboard - GKI Kebonagung Web Services';
             $data['category'] = 'Dashboard';
             $data['jemaat'] = $this->m_jemaat->daftarJemaat();
+            $data['lakiLaki'] = $this->m_jemaat->daftarJemaatByJK("Laki-laki");
+            $data['perempuan'] = $this->m_jemaat->daftarJemaatByJK("Perempuan");
             $data['ibadahMingguIni'] = $this->m_ibadah->daftarIbadahMingguIni();
+
+            $kehadiranTotal = $this->m_kehadiran->totalKehadiran();
+            $kehadiranLakiLaki = $this->m_kehadiran->totalKehadiranByJK("Laki-laki");
+            $kehadiranPerempuan = $this->m_kehadiran->totalKehadiranByJK("Perempuan");
+
+            $chart = [];
+            foreach ($kehadiranTotal as $row){
+                $chart['label'][] = tgl_indo($row->tanggal);
+                $chart['data'][] = (int)$row->jumlah;
+            }
+
+            foreach ($kehadiranLakiLaki as $row){
+                $chart['data2'][] = (int)$row->jumlah;
+            }
+
+            foreach ($kehadiranPerempuan as $row){
+                $chart['data3'][] = (int)$row->jumlah;
+            }
+
+            $data['kehadiran'] = json_encode($chart);
 
             $this->load->view('Templates/vHeader', $data);
             $this->load->view('Admin/vAdminMainHeader');
