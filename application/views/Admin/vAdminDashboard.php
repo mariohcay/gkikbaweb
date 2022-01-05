@@ -108,11 +108,11 @@
             </div>
             <div class="col-lg-2 pt-md-4">
               <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $avgKehadiran ?></div><br>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= round($avgKehadiran) ?></div><br>
               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT LAKI-LAKI</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $avgLakiLaki ?></div><br>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= round($avgLakiLaki) ?></div><br>
               <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT PEREMPUAN</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $avgPerempuan ?></div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= round($avgPerempuan) ?></div>
             </div>
           </div>
         </div>
