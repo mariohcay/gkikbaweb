@@ -29,19 +29,30 @@ class Admin extends CI_Controller
             $kehadiranLakiLaki = $this->m_kehadiran->totalKehadiranByJK("Laki-laki");
             $kehadiranPerempuan = $this->m_kehadiran->totalKehadiranByJK("Perempuan");
 
+            $total = 0;
+            $totalLakiLaki = 0;
+            $totalPerempuan = 0;
+
             $chart = [];
             foreach ($kehadiranTotal as $row){
                 $chart['label'][] = tgl_indo($row->tanggal);
                 $chart['data'][] = (int)$row->jumlah;
+                $total += (int)$row->jumlah;
             }
 
             foreach ($kehadiranLakiLaki as $row){
                 $chart['data2'][] = (int)$row->jumlah;
+                $totalLakiLaki += (int)$row->jumlah; 
             }
 
             foreach ($kehadiranPerempuan as $row){
                 $chart['data3'][] = (int)$row->jumlah;
+                $totalPerempuan += (int)$row->jumlah; 
             }
+            
+            $data['avgLakiLaki'] = $totalLakiLaki/count($kehadiranLakiLaki);
+            $data['avgPerempuan'] = $totalPerempuan/count($kehadiranPerempuan);
+            $data['avgKehadiran'] = $total/count($kehadiranTotal);
 
             $data['kehadiran'] = json_encode($chart);
 

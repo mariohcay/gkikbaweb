@@ -43,7 +43,7 @@
   </div>
 
   <div class="row">
-    <div class="col mb-4">
+    <div class="col-lg-4 mb-4">
       <div class="card border-left-dark shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
@@ -60,7 +60,7 @@
       </div>
     </div>
 
-    <div class="col mb-4">
+    <div class="col-lg-4 mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <div class="col mb-4">
+    <div class="col-lg-4 mb-4">
       <div class="card border-left-danger shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
@@ -94,15 +94,26 @@
   </div>
 
   <div class="row">
-
     <div class="col-md">
       <div class="card shadow mb-4 h-auto">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold text-primary">Kehadiran Jemaat</h6>
         </div>
         <div class="card-body">
-          <div class="chart-area" style="height: 500px">
-            <canvas id="myChart"></canvas>
+          <div class="row my-3">
+            <div class="col-lg-10">
+              <div class="chart-area" style="height: 500px">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="col-lg-2 pt-md-4">
+              <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $avgKehadiran ?></div><br>
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT LAKI-LAKI</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $avgLakiLaki ?></div><br>
+              <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT PEREMPUAN</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $avgPerempuan ?></div>
+            </div>
           </div>
         </div>
       </div>
@@ -174,16 +185,22 @@
       ]
     },
     options: {
+      hover: {
+        events: ['mousemove', 'click'],
+        onHover: (event, chartElement) => {
+          event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+        }
+      },
+      onClick: function(e) {
+        var activePoints = myChart.getElementsAtEventForMode(e, 'point', myChart.options);
+        var firstPoint = activePoints[0];
+        var xLabel = myChart.data.labels[firstPoint._index];
+        window.location.href = window.location + '/daftarKehadiranOnsite/' + convertTgl(xLabel);
+      },
       responsive: true,
       maintainAspectRatio: false,
       layout: {
         autoPadding: true
-        // padding: {
-        //   left: 10,
-        //   right: 10,
-        //   top: 25,
-        //   bottom: 10
-        // }
       },
       scales: {
         xAxes: [{
@@ -241,5 +258,36 @@
       }
     }
   });
+
+  function convertTgl(tgl) {
+    const convert = tgl.split(" ");
+    var bulan = "0";
+    if (convert[1] == "Januari") {
+      bulan = "01";
+    } else if (convert[1] == "Februari") {
+      bulan = "02";
+    } else if (convert[1] == "Maret") {
+      bulan = "03";
+    } else if (convert[1] == "April") {
+      bulan = "04";
+    } else if (convert[1] == "Mei") {
+      bulan = "05";
+    } else if (convert[1] == "Juni") {
+      bulan = "06";
+    } else if (convert[1] == "Juli") {
+      bulan = "07";
+    } else if (convert[1] == "Agustus") {
+      bulan = "08";
+    } else if (convert[1] == "September") {
+      bulan = "09";
+    } else if (convert[1] == "Oktober") {
+      bulan = "10";
+    } else if (convert[1] == "November") {
+      bulan = "11";
+    } else if (convert[1] == "Desember") {
+      bulan = "12";
+    }
+    return "IB" + convert[0] + bulan + convert[2];
+  }
 </script>
 <script src="<?= base_url() ?>/assets/js/demo/chart-area-demo.js"></script>
