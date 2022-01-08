@@ -27,7 +27,7 @@ if(!function_exists('tgl_indo'))
             'Desember'
         );
         $pecahkan = explode('-', $tanggal);
-        $tgl_indo = $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
+        $tgl_indo = (string)((int)$pecahkan[2]) . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
 
         if ($namaHari) {
             $num = date('N', strtotime($tanggal));
