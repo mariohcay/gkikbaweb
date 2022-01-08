@@ -24,13 +24,22 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet" />
   <style>
     .responsive-container {
-      position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
     }
 
     .responsive-iframe {
-      position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
-    
+
     .hovereffect {
       width: 100%;
       height: 100%;
@@ -110,9 +119,31 @@
       transform: scale(1);
     }
   </style>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body id="page-top">
-
   <script src="<?= base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?= base_url() ?>node_modules/responsive-toolkit/dist/bootstrap-toolkit.min.js"></script>
+  <script>
+    (function($, viewport) {
+      // Execute only after document has fully loaded
+      $(document).ready(function() {
+        if (viewport.is('<md')) {
+          if (!$("#accordionSidebar").hasClass("toggled")) {
+            $("#accordionSidebar").toggleClass("toggled");
+          }
+        }
+        $(window).resize(
+          viewport.changed(function() {
+            if (viewport.is('<md')) {
+              if (!$("#accordionSidebar").hasClass("toggled")) {
+                $("#accordionSidebar").toggleClass("toggled");
+              }
+            } 
+          })
+        );
+      });
+
+    })(jQuery, ResponsiveBootstrapToolkit);
+  </script>

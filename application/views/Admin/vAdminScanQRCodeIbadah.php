@@ -20,12 +20,12 @@
                   <h5><?= tgl_indo($ibadah['tanggalIbadah'], true) ?></h5>
               </div>
             </div>
-           </div>
+          </div>
 
           <!-- DataTales Example -->
           <?= $this->session->flashdata('message'); ?>
           <div class="card shadow mb-4">
-           <div class="card-body" id="daftarHadir">
+            <div class="card-body" id="daftarHadir">
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active font-weight-bold" href="#">Daftar Kehadiran</a>
                 <a class="nav-item nav-link" href="<?= base_url('Admin/jemaatTerdaftar/') . $ibadah['kodeIbadah'] ?>">Jemaat Terdaftar</a>

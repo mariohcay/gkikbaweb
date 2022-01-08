@@ -106,7 +106,7 @@
                 <canvas id="myChart"></canvas>
               </div>
             </div>
-            <div class="col-lg-2 pt-md-4">
+            <div class="col-lg-2 mt-sm-4 visible-xs" style="margin-top: 24px">
               <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800"><?= round($avgKehadiran) ?></div><br>
               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">RATA-RATA KEHADIRAN JEMAAT LAKI-LAKI</div>
@@ -209,13 +209,15 @@
             drawBorder: false
           },
           ticks: {
-            padding: 15
+            padding: 15,
+            maxTicksLimit: 7,
+            maxRotation: 90
           }
         }],
         yAxes: [{
           ticks: {
             beginAtZero: true,
-            maxTicksLimit: 10,
+            maxTicksLimit: 5,
             padding: 15
           },
           gridLines: {
