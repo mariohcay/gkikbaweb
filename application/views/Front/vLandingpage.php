@@ -99,7 +99,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Allah Masih Terus Berkarya"<br>Minggu, 16 Januari 2022 - 07.00 WIB<br>Pdt. Martin K. Nugroho</p>
+                                <p class="card-text">"Allah Masih Terus Berkarya"<br>Minggu, 16 Januari 2022 - 07.00 WIB<br>Pdt. Martin K. Nugroho<br>(disertai dengan perjamuan kudus)</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
