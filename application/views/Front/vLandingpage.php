@@ -93,23 +93,23 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/pivLblj7rtE" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/YW0rhfi4rok" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Arti Pembaptisan Yesus"<br>Minggu, 9 Januari 2022 - 07.00 WIB<br>Pdt. Imanuel Gunawan Prasidi</p>
+                                <p class="card-text">"Allah Masih Terus Berkarya"<br>Minggu, 16 Januari 2022 - 07.00 WIB<br>Pdt. Martin K. Nugroho</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/pivLblj7rtE" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/YW0rhfi4rok" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->

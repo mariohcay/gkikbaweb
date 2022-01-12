@@ -11640,6 +11640,23 @@ a:focus {
   }
 }
 
+.chartWrapper {
+  position: relative;
+}
+
+.chartWrapper > canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events:none;
+}
+
+.chartAreaWrapper {
+  width: 100px;
+  overflow-x: scroll;
+}
+
+
 .bg-login-image {
   background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
   background-position: center;

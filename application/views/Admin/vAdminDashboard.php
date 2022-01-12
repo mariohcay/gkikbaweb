@@ -130,6 +130,7 @@
 <script>
   var ctx = document.getElementById('myChart').getContext('2d');
   var cData = JSON.parse('<?php echo $kehadiran; ?>');
+
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -257,7 +258,7 @@
             return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
           }
         }
-      }
+      },
     }
   });
 
@@ -288,6 +289,9 @@
       bulan = "11";
     } else if (convert[1] == "Desember") {
       bulan = "12";
+    }
+    if (parseInt(convert[0]) < 10) {
+      convert[0] = "0" + convert[0];
     }
     return "IB" + convert[0] + bulan + convert[2];
   }
