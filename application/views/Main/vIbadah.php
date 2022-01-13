@@ -61,7 +61,7 @@
                     <?php
                     if ($vaksin !== "") { //jika data sudah lengkap
                       if ($vaksin !== "Belum vaksin") { //jika sudah vaksin
-                        if ($age >= 13 && $age <= 70) { //jika cukup umur
+                        if ($age >= 13) { //jika cukup umur
                           if (!empty($kehadiran)) { //jika sudah mendaftar
                             if ($kehadiran['status'] === "TERDAFTAR") { //jika sudah terdaftar
                               echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
