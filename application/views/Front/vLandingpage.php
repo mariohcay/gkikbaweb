@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
@@ -119,7 +119,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Tak Terduga"<br>Minggu, 9 Januari 2022 - 09.00 WIB<br>Kak Lia dan Bu Endang</p>
+                                <p class="card-text">"Pekerjaan Allah Dinyatakan dalam Kelemahanku"<br>Minggu, 16 Januari 2022 - 09.00 WIB<br>Kak Brina dan Pak Wahyu</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
