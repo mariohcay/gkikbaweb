@@ -253,7 +253,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 9 Januari 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 16 Januari 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -265,7 +265,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 9 Januari 2022"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 16 Januari 2022"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
                         </a>
