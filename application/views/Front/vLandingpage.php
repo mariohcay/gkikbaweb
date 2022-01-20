@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
