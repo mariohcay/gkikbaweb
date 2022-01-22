@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
@@ -119,7 +119,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Pekerjaan Allah Dinyatakan dalam Kelemahanku"<br>Minggu, 16 Januari 2022 - 09.00 WIB<br>Kak Brina dan Pak Wahyu</p>
+                                <p class="card-text">"Yesus Gembalaku"<br>Minggu, 23 Januari 2022 - 09.00 WIB<br>Kak Agnes dan Ibu Yeussy</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -147,21 +147,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://meet.google.com/qtc-fuvq-kpu" target="_blank" class="text-decoration-none">
+                            <a href="https://meet.google.com/cqs-gdvw-nzm" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/pa.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Pemahaman Alkitab</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Dari Penderitaan Diri Menuju Pengharapan Bersama"<br>Kamis, 18 November 2021 - 18.00 WIB <br>Sdr. Rivaldy Anjar Saputra</p>
+                                <p class="card-text">"Firman Allah yang Mengubahkan"<br>Kamis, 27 Januari 2022 - 18.00 WIB <br>Sdri. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://meet.google.com/qtc-fuvq-kpu" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://meet.google.com/cqs-gdvw-nzm" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
@@ -253,7 +253,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 16 Januari 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 23 Januari 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -265,7 +265,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 16 Januari 2022"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 23 Januari 2022"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
                         </a>
