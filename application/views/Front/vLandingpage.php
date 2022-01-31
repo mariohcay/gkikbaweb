@@ -68,11 +68,16 @@
                     <h2 class="text-white mt-0">Pengumuman Penting!</h2>
                     <hr class="divider divider-light" />
                     <p class="text-white-75 mb-5">
-                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13 tahun.</b><br><br>
+                        Memperhatikan kondisi kesehatan lingkungan terkait penyebaran covid-19 varian Omicron, maka mulai bulan Februari 2022 kehadiran jemaat di gereja ditentukan dengan jadwal berikut: <br><br>
+                        <b class="text-white">Minggu 6 Februari 2022 - lingkungan A dan B</b><br>
+                        <b class="text-white">Minggu 13 Februari 2022 -  lingkungan C, D, dan E</b><br><br>
+                        Dengan demikian pendaftaran ibadah melalui website akan ditiadakan untuk sementara. <br>
+                        Silahkan menghubungi koordinator lingkungan masing-masing untuk konfirmasi kehadiran ibadah.
+                        <!-- Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13 tahun.</b><br><br>
                         
-                        Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
+                        Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br> -->
                     </p>
-                    <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a>
+                    <!-- <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a> -->
                 </div>
             </div>
         </div>
@@ -93,18 +98,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/zAaYYHjKc5w" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/k6DnIy7SD7s" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Ibadah Umum</h4>
+                                <h4 class="card-title">Ibadah Peneguhan dan Pemberkatan Nikah</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Menghadapi Penolakan dengan Kasih"<br>Minggu, 30 Januari 2022 - 07.00 WIB<br>Pdt. Andreas Tjatur</p>
+                                <p class="card-text"><b>Rendy Kurniawan<br>&<br>Cynthia Prisca Sari</b><br>Rabu, 2 Februari 2022 - 10.00 WIB<br>Pdt. Imanuel Gunawan Prasidi</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/zAaYYHjKc5w" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <!-- <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a> -->
+                                <a href="https://youtu.be/k6DnIy7SD7s" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
@@ -147,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
