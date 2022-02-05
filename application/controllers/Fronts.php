@@ -20,6 +20,7 @@ class Fronts extends CI_Controller
 
     public function pilihOnsite()
     {
+        redirect('Fronts'); //sementara daftar online tidak ada
         $data['ibadah'] = $this->m_ibadah->daftarIbadahMingguIni();
         $data['title'] = "Daftar Ibadah Onsite - GKI Kebonagung";
         $this->load->view('Front/vPilihOnsite', $data);
@@ -27,6 +28,7 @@ class Fronts extends CI_Controller
 
     public function daftarOnsite($kodeIbadah)
     {
+        $this->index();
         $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
         $data['kodeIbadah'] = $kodeIbadah;
         $data['title'] = "Daftar Ibadah Onsite - GKI Kebonagung";
