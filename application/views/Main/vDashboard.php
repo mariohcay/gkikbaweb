@@ -41,20 +41,22 @@
                     $id = $this->session->userdata('id');
                     $kehadiran = $this->m_kehadiran->cekStatusKehadiran($id, $data['kodeIbadah']);
                     ?>
-                    <h6><?php
-                        $tersedia = $data['kuota'] - $terisi;
-                        if ($vaksin !== "Belum vaksin") { // Jika sudah vaksin
-                          if (empty($kehadiran)) {
-                            if ($tersedia > 0) { //jika kuota masih ada
-                              echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
-                            } else { //jika kuota sudah habis
-                              echo "<b class='text-danger'>Mohon maaf kuota ibadah on-site sudah habis</b>";
-                            }
+                    <!-- <h6>
+                      <?php
+                      $tersedia = $data['kuota'] - $terisi;
+                      if ($vaksin !== "Belum vaksin") { // Jika sudah vaksin
+                        if (empty($kehadiran)) {
+                          if ($tersedia > 0) { //jika kuota masih ada
+                            echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
+                          } else { //jika kuota sudah habis
+                            echo "<b class='text-danger'>Mohon maaf kuota ibadah on-site sudah habis</b>";
                           }
-                        } else { //jika belum vaksin
-                          echo "<b class='text-danger'>Mohon maaf Anda belum mendapatkan vaksin sehingga belum bisa mengikuti ibadah on-site</b>";
                         }
-                        ?></h6>
+                      } else { //jika belum vaksin
+                        echo "<b class='text-danger'>Mohon maaf Anda belum mendapatkan vaksin sehingga belum bisa mengikuti ibadah on-site</b>";
+                      }
+                      ?>
+                    </h6> -->
                     <?php
                     if ($vaksin !== "") { //jika data sudah lengkap
                       if ($vaksin !== "Belum vaksin") { //jika sudah vaksin
