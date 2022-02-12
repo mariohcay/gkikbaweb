@@ -124,7 +124,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Tak Pernah Terlambat"<br>Minggu, 13 Februari 2022 - 09.00 WIB<br>Bu Datik dan Bu Wiwit</p>
+                                <p class="card-text">"Berharap dengan Rendah Hati"<br>Minggu, 13 Februari 2022 - 09.00 WIB<br>Kak Brina dan Bu Sriasih</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
