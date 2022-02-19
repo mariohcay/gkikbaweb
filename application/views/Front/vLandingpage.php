@@ -156,7 +156,7 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="hhttps://meet.google.com/knm-huzf-zcd" target="_blank" class="text-decoration-none">
+                            <a href="https://meet.google.com/knm-huzf-zcd" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/pa.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
@@ -166,7 +166,7 @@
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="hhttps://meet.google.com/knm-huzf-zcd" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://meet.google.com/knm-huzf-zcd" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
