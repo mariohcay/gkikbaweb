@@ -69,8 +69,8 @@
                     <hr class="divider divider-light" />
                     <p class="text-white-75 mb-5">
                         Memperhatikan kondisi kesehatan lingkungan terkait penyebaran covid-19 varian Omicron, maka mulai bulan Februari 2022 kehadiran jemaat di gereja ditentukan dengan jadwal berikut: <br><br>
-                        <b class="text-white">Minggu 6 Februari 2022 - lingkungan A dan B</b><br>
-                        <b class="text-white">Minggu 13 Februari 2022 -  lingkungan C, D, dan E</b><br><br>
+                        <b class="text-white">Minggu 20 Februari 2022 - lingkungan A dan B</b><br>
+                        <b class="text-white">Minggu 27 Februari 2022 -  lingkungan C, D, dan E</b><br><br>
                         Dengan demikian pendaftaran ibadah melalui website akan ditiadakan untuk sementara. <br>
                         Silahkan menghubungi koordinator lingkungan masing-masing untuk konfirmasi kehadiran ibadah.
                         <!-- Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13 tahun.</b><br><br>
