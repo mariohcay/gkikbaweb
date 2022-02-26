@@ -67,16 +67,30 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-white mt-0">Pengumuman Penting!</h2>
                     <hr class="divider divider-light" />
-                    <p class="text-white-75 mb-5">
+                    <p class="text-white-75">
                         Memperhatikan kondisi kesehatan lingkungan terkait penyebaran covid-19 varian Omicron, maka mulai bulan Februari 2022 kehadiran jemaat di gereja ditentukan dengan jadwal berikut: <br><br>
-                        <b class="text-white">Minggu 20 Februari 2022 - lingkungan A dan B</b><br>
-                        <b class="text-white">Minggu 27 Februari 2022 -  lingkungan C, D, dan E</b><br><br>
+                        <b class="text-white">Minggu, 20 Februari 2022 - lingkungan A dan B</b><br>
+                        <b class="text-white">Minggu, 27 Februari 2022 - lingkungan C, D, dan E</b><br><br>
                         Dengan demikian pendaftaran ibadah melalui website akan ditiadakan untuk sementara. <br>
                         Silahkan menghubungi koordinator lingkungan masing-masing untuk konfirmasi kehadiran ibadah.
-                        <!-- Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13 tahun.</b><br><br>
+                    </p>
+                    <hr class="divider divider-light" />
+                    <p class="text-white-75 mb-4">
+                        Segenap jemaat diundang untuk ambil bagian dalam pelayanan bersama dengan <br><b class="text-white">Tim Multimedia GKI Kebonagung</b>. <br>
+                        Bagi jemaat yang berminat untuk bergabung dalam Tim Multimedia dapat mengisi form pendaftaran melalui <i>link</i> di bawah ini Pendaftaran dapat dilakukan mulai tanggal <b class="text-white">27 Februari – 12 Maret 2022.</b>
+                    </p>
+                    <!-- <p class="text-white-75 mb-5">
+                        <b class="text-white">Ibadah Rabu Abu tanggal 2 Maret 2022</b> akan dilaksanakan secara <b class="text-white"><i>hybrid (on-site dan online)</i></b> dengan <b class="text-white">kapasitas maksimal 40 jemaat (tempat duduk lesehan)</b> yang hadir di gereja. <br>
+                        <b class="text-white">Syarat menghadiri ibadah <i>on-site</i>: berusia 13-59 tahun, mematuhi protokol kesehatan, dan sudah mendapatkan vaksin.</b><br><br>
+                        Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
+                    </p>  -->
+
+                    <!-- Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13 tahun.</b><br><br>
                         
                         Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br> -->
-                    </p>
+                    
+                    <a class="btn btn-light btn-xl" target="_blank" href="https://forms.gle/HBjBGKiT6v9GucD6A">PENDAFTARAN TIM MULTIMEDIA</a>
+                    <!-- <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/daftarOnsite/IB02032022">DAFTAR IBADAH RABU ABU</a> -->
                     <!-- <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a> -->
                 </div>
             </div>
@@ -98,18 +112,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/UK-7ENtJiaI" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/p57BHr0JDro" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Cara Membalas Musuh"<br>Minggu, 20 Februari 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"Kemah Allah Seluas Dunia"<br>Minggu, 27 Februari 2022 - 07.00 WIB<br>Pdt. Michael Chandra Wijaya <br>(GKI Jember)</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <!-- <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a> -->
-                                <a href="https://youtu.be/UK-7ENtJiaI" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/p57BHr0JDro" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +138,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Ingat Bersyukur"<br>Minggu, 20 Februari 2022 - 09.00 WIB<br>Kak Valdi dan Kak Sonya</p>
+                                <p class="card-text">"Benar, Yesus Adalah Tuhan"<br>Minggu, 27 Februari 2022 - 09.00 WIB<br>Kak Nella dan Kak Nenes</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -152,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
@@ -258,7 +272,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 20 Februari 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 27 Februari 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -270,7 +284,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 20 Februari 2022"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 27 Februari 2022"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
                         </a>

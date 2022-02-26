@@ -28,7 +28,7 @@ class Fronts extends CI_Controller
 
     public function daftarOnsite($kodeIbadah)
     {
-        $this->index();
+        redirect('Fronts'); //sementara daftar online tidak ada
         $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
         $data['kodeIbadah'] = $kodeIbadah;
         $data['title'] = "Daftar Ibadah Onsite - GKI Kebonagung";
