@@ -79,18 +79,19 @@
                         Segenap jemaat diundang untuk ambil bagian dalam pelayanan bersama dengan <br><b class="text-white">Tim Multimedia GKI Kebonagung</b>. <br>
                         Bagi jemaat yang berminat untuk bergabung dalam Tim Multimedia dapat mengisi form pendaftaran melalui <i>link</i> di bawah ini Pendaftaran dapat dilakukan mulai tanggal <b class="text-white">27 Februari – 12 Maret 2022.</b>
                     </p>
-                    <!-- <p class="text-white-75 mb-5">
+                    <a class="btn btn-light btn-xl mb-2" target="_blank" href="https://forms.gle/HBjBGKiT6v9GucD6A">PENDAFTARAN TIM MULTIMEDIA</a>
+                    <hr class="divider divider-light mb-4" />
+                    <p class="text-white-75 mb-5 mt-4">
                         <b class="text-white">Ibadah Rabu Abu tanggal 2 Maret 2022</b> akan dilaksanakan secara <b class="text-white"><i>hybrid (on-site dan online)</i></b> dengan <b class="text-white">kapasitas maksimal 40 jemaat (tempat duduk lesehan)</b> yang hadir di gereja. <br>
                         <b class="text-white">Syarat menghadiri ibadah <i>on-site</i>: berusia 13-59 tahun, mematuhi protokol kesehatan, dan sudah mendapatkan vaksin.</b><br><br>
                         Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
-                    </p>  -->
+                    </p> 
 
                     <!-- Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">31 Oktober 2021</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13 tahun.</b><br><br>
                         
                         Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br> -->
                     
-                    <a class="btn btn-light btn-xl" target="_blank" href="https://forms.gle/HBjBGKiT6v9GucD6A">PENDAFTARAN TIM MULTIMEDIA</a>
-                    <!-- <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/daftarOnsite/IB02032022">DAFTAR IBADAH RABU ABU</a> -->
+                    <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH RABU ABU</a>
                     <!-- <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a> -->
                 </div>
             </div>

@@ -63,7 +63,7 @@
                     <?php
                     if ($vaksin !== "") { //jika data sudah lengkap
                       if ($vaksin !== "Belum vaksin") { //jika sudah vaksin
-                        if ($age >= 13) { //jika cukup umur
+                        if ($age >= 13 && $age <= 59) { //jika cukup umur
                           if (!empty($kehadiran)) { //jika sudah mendaftar
                             if ($kehadiran['status'] === "TERDAFTAR") { //jika sudah terdaftar
                               echo '<a href="' . base_url('Ibadah/lihatQRCode/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">SUDAH MENDAFTAR, TAMPILKAN QR CODE</a>';
@@ -73,7 +73,7 @@
                             }
                           } else { //jika belum daftar
                             if ($tersedia > 0) { //jika kuota masih ada
-                              // echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2 my-1 mr-1">DAFTAR</a>';
+                              echo '<a href="' . base_url('Ibadah/DaftarIbadah/') . $data['kodeIbadah'] . '" class="btn btn-primary btn-sm p-2 my-1 mr-1">DAFTAR</a>';
                               echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
                             } else { //jika kuota habis
                               echo '<a href="' . base_url('Ibadah/LihatIbadah/') . $data['kodeIbadah'] . '" class="btn btn-success btn-sm p-2 my-1 mr-1">LIHAT</a>';
