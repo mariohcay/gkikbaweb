@@ -47,7 +47,7 @@ class Ibadah extends CI_Controller
             $this->load->view('Templates/vFooter');
         }
     }
-
+    
     public function selesaiDaftar($id, $kodeIbadah)
     {
         if (_checkUser()) {
