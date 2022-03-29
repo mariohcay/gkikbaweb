@@ -86,10 +86,12 @@
                         <b class="text-white">Syarat menghadiri ibadah <i>on-site</i>: berusia 13-59 tahun, mematuhi protokol kesehatan, dan sudah mendapatkan vaksin.</b><br><br>
                         Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
                     </p>  -->
+                    <p class="text-white-75">
 
-                    Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan perwakilan jemaat telah dilaksanakan mulai <b class="text-white">3 April 2022</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13 tahun.</b><br><br>
+                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan kehadiran jemaat akan dilaksanakan mulai <b class="text-white">3 April 2022</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13-59 tahun.</b><br><br>
 
-                    Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
+                        Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
+                    </p>
 
                     <!-- <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH RABU ABU</a> -->
                     <a class="btn btn-light btn-xl" href="<?= base_url() ?>Fronts/pilihOnsite">DAFTAR IBADAH <i>ON-SITE</i></a>
