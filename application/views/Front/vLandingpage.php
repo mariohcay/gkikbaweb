@@ -88,7 +88,7 @@
                     </p>  -->
                     <p class="text-white-75">
 
-                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan kehadiran jemaat akan dilaksanakan mulai <b class="text-white">3 April 2022</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia minimal 13-59 tahun.</b><br><br>
+                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan kehadiran jemaat akan dilaksanakan mulai <b class="text-white">3 April 2022</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia 13-59 tahun.</b><br><br>
 
                         Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
                     </p>
@@ -115,18 +115,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/2rKCZtzbls0" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/gkROQbghh0U" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Makna Pengurapan Yesus"<br>Minggu, 3 April 2022 - 07.00 WIB<br>Pdt. Imanuel Gunawan Prasidi</p>
+                                <p class="card-text">"Hamba yang Menderita"<br>Minggu, 10 April 2022 - 07.00 WIB<br>Sdr. Anthon Ronan Viesha</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/2rKCZtzbls0" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/gkROQbghh0U" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
@@ -287,7 +287,8 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 27 Februari 2022"> <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 10 April 2022">
+                            <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
                         </a>
