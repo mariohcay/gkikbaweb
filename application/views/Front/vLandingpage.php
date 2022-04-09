@@ -131,7 +131,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
@@ -141,7 +141,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Benar, Yesus Adalah Tuhan"<br>Minggu, 27 Februari 2022 - 09.00 WIB<br>Kak Nella dan Kak Nenes</p>
+                                <p class="card-text">"Tuhan Yesus Sumber Sukacitaku"<br>Minggu, 10 April 2022 - 09.00 WIB<br>Ibu Sonya dan Ibu Yeussy</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -275,7 +275,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 27 Februari 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 10 April 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
