@@ -126,6 +126,7 @@
                                     <option value="Belum vaksin" <?php if ($this->session->flashdata('vaksin') == "Belum vaksin") echo "selected"; ?>>Belum vaksin</option>
                                     <option value="Sudah 1x" <?php if ($this->session->flashdata('vaksin') == "Sudah 1x") echo "selected"; ?>>Sudah 1x</option>
                                     <option value="Sudah 2x" <?php if ($this->session->flashdata('vaksin') == "Sudah 2x") echo "selected"; ?>>Sudah 2x</option>
+                                    <option value="Sudah 3x" <?php if ($this->session->flashdata('vaksin') == "Sudah 3x") echo "selected"; ?>>Sudah 3x</option>
                                 </select>
                             </div>
                         </div>
