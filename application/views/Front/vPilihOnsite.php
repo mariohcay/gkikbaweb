@@ -81,20 +81,22 @@
                                     <!-- <?= tgl_indo($data['tanggalIbadah'], true)?> <br> -->
                                     "<?= $data['temaIbadah'] ?>"<br>
                                     Pukul <?= time_indo($data['jamIbadah']) ?> WIB <br>
+                                    <a class="text-black-50 text-decoration-none">(Seluruh jemaat berusia di atas 13 tahun diperbolehkan hadir)</a>
                                     <?php
-                                    $tersedia = $data['kuota'] - $terisi;
-                                    if ($tersedia > 0) {
-                                        echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
-                                    } else echo "<b class='text-danger'>Maaf kuota sudah habis</b>";
+                                    // $tersedia = $data['kuota'] - $terisi;
+                                    // if ($tersedia > 0) {
+                                    //     echo "<b class='text-success'>Tersedia $tersedia kursi lagi</b>";
+                                    // } else echo "<b class='text-danger'>Maaf kuota sudah habis</b>";
                                     ?>
                                 </p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url('Fronts/daftarOnsite/' . $data['kodeIbadah']) ?>" class="btn mb-2 px-5
-                                <?php if ($tersedia < 1) {
-                                    echo "btn-secondary disabled";
-                                    } 
+                                <?php
+                                    // if ($tersedia < 1) {
+                                    // echo "btn-secondary disabled";
+                                    // } 
                                 ?>
                                 btn-primary" style="border-radius: 10rem; font-size: 11pt">PILIH</a>
                             </div>
