@@ -115,23 +115,43 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/gkROQbghh0U" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/VkTaIEiKZDI" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Ibadah Umum</h4>
+                                <h4 class="card-title">Ibadah Jumat Agung</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Hamba yang Menderita"<br>Minggu, 10 April 2022 - 07.00 WIB<br>Sdr. Anthon Ronan Viesha</p>
+                                <p class="card-text">"Raja yang Ditolak"<br>Jumat, 15 April 2022 - 18.30 WIB<br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/gkROQbghh0U" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/VkTaIEiKZDI" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4">
+                    <div class="mt-5">
+                        <div class="card text-center shadow mx-3">
+                            <!-- UBAH -->
+                            <a href="https://youtu.be/y6ZJtRDPt9o" target="_blank" class="text-decoration-none">
+                                <img src="<?= base_url() ?>front/assets/img/umum2.jpg" class="card-img-top">
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">Ibadah Paskah dan Perjamuan Kudus</h4>
+                                <!-- UBAH -->
+                                <p class="card-text">"Kemenangan untuk Kehidupan"<br>Minggu, 17 April 2022 - 05.00 WIB<br>Pdt. Imanuel Gunawan Prasidi</p>
+                            </div>
+                            <div class="card-body">
+                                <!-- UBAH -->
+                                <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
+                                <a href="https://youtu.be/y6ZJtRDPt9o" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
