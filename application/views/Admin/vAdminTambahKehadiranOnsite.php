@@ -54,6 +54,7 @@
                             <option value="Belum vaksin" class="d-block">Belum vaksin</option>
                             <option value="Sudah 1x" class="d-block">Sudah 1x</option>
                             <option value="Sudah 2x" class="d-block">Sudah 2x</option>
+                            <option value="Sudah 3x" class="d-block">Sudah 3x</option>
                         </select>
                     </li>
                 </ul>
