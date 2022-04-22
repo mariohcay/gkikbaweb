@@ -87,8 +87,7 @@
                         Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.
                     </p>  -->
                     <p class="text-white-75">
-
-                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan kehadiran jemaat akan dilaksanakan mulai <b class="text-white">3 April 2022</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia 13-59 tahun.</b><br><br>
+                        Sehubungan dengan penurunan level PPKM maka ibadah <b class="text-white"><i>onsite-online (hybrid)</i></b> dengan kehadiran jemaat dapat dilaksanakan mulai <b class="text-white">3 April 2022</b>. <br><b class="text-white">Syarat: menerapkan protokol kesehatan, sudah mendapatkan vaksin, berusia lebih dari 13 tahun.</b><br><br>
 
                         Jemaat yang ingin hadir dalam ibadah <i>on-site</i> di gereja dapat mendaftarkan diri terlebih dahulu melalui <i>link</i> di bawah ini atau dapat juga melalui koordinator lingkungan masing-masing.<br><br>
                     </p>
