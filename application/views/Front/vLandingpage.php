@@ -168,21 +168,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://meet.google.com/wit-jxou-izc" target="_blank" class="text-decoration-none">
+                            <a href="https://meet.google.com/sxd-umed-hra" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/pa.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Pemahaman Alkitab</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Dualisme Menjadi Umat Allah"<br>Kamis, 31 Maret 2022 - 18.00 WIB <br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"Alfa dan Omega"<br>Kamis, 28 April 2022 - 18.00 WIB <br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://meet.google.com/wit-jxou-izc" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://meet.google.com/sxd-umed-hra" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
