@@ -34,25 +34,37 @@ class Admin extends CI_Controller
             $totalPerempuan = 0;
 
             $chart = [];
-            foreach ($kehadiranTotal as $row){
+            foreach ($kehadiranTotal as $row) {
                 $chart['label'][] = tgl_indo($row->tanggal);
-                $chart['data'][] = (int)$row->jumlah;
+                if (empty($row->jumlah)){
+                    $chart['data'][] = 0;
+                }else{
+                    $chart['data'][] = (int)$row->jumlah;
+                }
                 $total += (int)$row->jumlah;
             }
 
-            foreach ($kehadiranLakiLaki as $row){
-                $chart['data2'][] = (int)$row->jumlah;
-                $totalLakiLaki += (int)$row->jumlah; 
+            foreach ($kehadiranLakiLaki as $row) {
+                if (empty($row->jumlah)){
+                    $chart['data2'][] = 0;
+                }else{
+                    $chart['data2'][] = (int)$row->jumlah;
+                }
+                $totalLakiLaki += (int)$row->jumlah;
             }
 
-            foreach ($kehadiranPerempuan as $row){
-                $chart['data3'][] = (int)$row->jumlah;
-                $totalPerempuan += (int)$row->jumlah; 
+            foreach ($kehadiranPerempuan as $row) {
+                if (empty($row->jumlah)){
+                    $chart['data3'][] = 0;
+                }else{
+                    $chart['data3'][] = (int)$row->jumlah;
+                }
+                $totalPerempuan += (int)$row->jumlah;
             }
-            
-            $data['avgLakiLaki'] = $totalLakiLaki/count($kehadiranLakiLaki);
-            $data['avgPerempuan'] = $totalPerempuan/count($kehadiranPerempuan);
-            $data['avgKehadiran'] = $total/count($kehadiranTotal);
+
+            $data['avgLakiLaki'] = $totalLakiLaki / count($kehadiranLakiLaki);
+            $data['avgPerempuan'] = $totalPerempuan / count($kehadiranPerempuan);
+            $data['avgKehadiran'] = $total / count($kehadiranTotal);
 
             $data['kehadiran'] = json_encode($chart);
 
