@@ -114,18 +114,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/_5KZAJo15UM" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/-KisHvGuPh4" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Keramahan yang Menggembalakan"<br>Minggu, 1 Mei 2022 - 07.00 WIB<br>Pdt. Imanuel Gunawan Prasidi</p>
+                                <p class="card-text">"Everlasting Life"<br>Minggu, 8 Mei 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/_5KZAJo15UM" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/-KisHvGuPh4" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>

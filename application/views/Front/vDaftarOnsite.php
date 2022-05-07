@@ -83,10 +83,10 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-floating mb-3">
+                        <!-- <div class="form-floating mb-3">
                             <input class="form-control" name="tanggalLahir" type="date" placeholder="tanggal Lahir" max="<?= date('Y-m-d'); ?>" required value="<?= $this->session->flashdata('tanggalLahir'); ?>" />
                             <label for="tanggal Lahir">Tanggal Lahir</label>
-                        </div>
+                        </div> -->
                         <!-- <div class="form-floating mb-3">
                             <div class="form-group">
                                 <div class="row">
