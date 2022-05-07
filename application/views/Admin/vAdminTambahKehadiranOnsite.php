@@ -33,10 +33,10 @@
                             <option value="Perempuan" class="d-block">Perempuan</option>
                         </select>
                     </li>
-                    <li class="list-group-item">
+                    <!-- <li class="list-group-item">
                         <label for="Tanggal Lahir" class="font-weight-bold">Tanggal Lahir</label>
                         <input type="date" class="form-control d-block" id="tanggalLahir" name="tanggalLahir" required>
-                    </li>
+                    </li> -->
                     <li class="list-group-item">
                         <label for="Lingkungan" class="font-weight-bold">Lingkungan</label>
                         <select class="custom-select" name="lingkungan" required>

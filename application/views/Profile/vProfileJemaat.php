@@ -8,13 +8,13 @@
           <a href="">
             <img class="img-profile rounded-circle shadow w-75" src="<?= base_url() ?>/assets/img/user.png">
           </a>
-          </div>
+        </div>
         <div class="col-lg col-md">
           <h3><?= $jemaat['nama']; ?></h3>
           <h5><?= $jemaat['email']; ?></h5>
           <h5><?= $jemaat['alamat']; ?></h5>
           <h5>Lingkungan: <?= $jemaat['lingkungan']; ?></h5>
-          <a href="<?= base_url('Ibadah/LihatIbadah/')?>" class="btn btn-primary d-none btn-sm p-2 my-1 mr-1">UBAH FOTO PROFIL</a>
+          <a href="<?= base_url('Ibadah/LihatIbadah/') ?>" class="btn btn-primary d-none btn-sm p-2 my-1 mr-1">UBAH FOTO PROFIL</a>
         </div>
       </div>
     </div>
@@ -111,6 +111,9 @@
               <option value="Sudah 2x" class="d-block" <?php if ($jemaat['vaksin'] === "Sudah 2x") {
                                                           echo "selected";
                                                         }; ?>>Sudah 2x</option>
+              <option value="Sudah 3x" class="d-block" <?php if ($jemaat['vaksin'] === "Sudah 3x") {
+                                                          echo "selected";
+                                                        }; ?>>Sudah 3x</option>
             </select>
           </li>
         </ul>

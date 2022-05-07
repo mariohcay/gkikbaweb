@@ -411,18 +411,19 @@ class Admin extends CI_Controller
     public function submitTambahKehadiran($kodeIbadah)
     {
         $data['ibadah'] = $this->m_ibadah->ambilIbadah($kodeIbadah);
-        date_default_timezone_set("Asia/Jakarta");
-
+        
         $nama = ucwords(strtolower($this->input->post('nama')));
         $tanggalLahir = $this->input->post('tanggalLahir');
         $lingkungan = $this->input->post('lingkungan');
 
-        $date = new DateTime($tanggalLahir);
-        $result = $date->format('dmY');
-        $id = "JM" . (rand(1000, 9999) + (int)$result);
+        // $date = new DateTime($tanggalLahir);
+        // $result = $date->format('dmY');
+        // $id = "JM" . (rand(1000, 9999) + (int)$result);
+        date_default_timezone_set("Asia/Jakarta");
+        $result = rand(10, 99) + (int)date('dHis');
 
         $jemaat = [
-            'id' => $id,
+            'id' => "JM" . $result,
             'nama' => $nama,
             // 'tanggalLahir' => $tanggalLahir,
             'jenisKelamin' => $this->input->post('jenisKelamin'),
@@ -434,13 +435,13 @@ class Admin extends CI_Controller
             'timeHadir' => date('Y-m-d H:i:s')
         ];
 
-        $usia = date_diff(date_create($tanggalLahir), date_create(date("d-m-Y")))->y;
+        // $usia = date_diff(date_create($tanggalLahir), date_create(date("d-m-Y")))->y;
 
-        if ($usia < 13) {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia minimal 13 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
-            $this->session->set_flashdata($jemaat);
-            redirect('Admin/tambahKehadiranOnsite/' . $kodeIbadah);
-        }
+        // if ($usia < 13) {
+        //     $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena batasan usia minimal 13 tahun </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
+        //     $this->session->set_flashdata($jemaat);
+        //     redirect('Admin/tambahKehadiranOnsite/' . $kodeIbadah);
+        // }
         if ($this->input->post('vaksin') == "Belum vaksin") {
             $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Maaf Anda tidak bisa mengikuti ibadah <i>on-site</i> karena belum mendapatkan vaksin </small><i class="fa fa-exclamation-circle my-auto"></i></div>');
             $this->session->set_flashdata($jemaat);
