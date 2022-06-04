@@ -118,7 +118,7 @@
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Ibadah Hari Pentakosta/h4>
+                                <h4 class="card-title">Ibadah Hari Pentakosta</h4>
                                 <!-- UBAH -->
                                 <p class="card-text">"Roh Kebenaran, Roh Pemersatu"<br>KMinggu, 5 Juni 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
                             </div>
