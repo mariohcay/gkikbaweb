@@ -114,18 +114,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/jA8uDgkKPQE" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/xlAf2IrYrX4" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
-                                <h4 class="card-title">Ibadah Hari Pentakosta</h4>
+                                <h4 class="card-title">Ibadah Minggu Trinitas</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Roh Kebenaran, Roh Pemersatu"<br>KMinggu, 5 Juni 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"RBerhikmat dalam Kasih Allah Trinitas"<br>Minggu, 12 Juni 2022 - 07.00 WIB<br>Pdt. Dwi Santoso</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/jA8uDgkKPQE" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/xlAf2IrYrX4" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
@@ -274,7 +274,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 10 April 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 5 Juni 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -286,7 +286,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 10 April 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 12 Juni 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
