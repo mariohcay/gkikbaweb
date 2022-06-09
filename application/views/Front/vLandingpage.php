@@ -120,7 +120,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Minggu Trinitas</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"RBerhikmat dalam Kasih Allah Trinitas"<br>Minggu, 12 Juni 2022 - 07.00 WIB<br>Pdt. Dwi Santoso</p>
+                                <p class="card-text">"Berhikmat dalam Kasih Allah Trinitas"<br>Minggu, 12 Juni 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
