@@ -114,18 +114,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/8_paroErErs" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/Pu0weQezat4" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Kuasa Kristus Membawa Perubahan"<br>Minggu, 19 Juni 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"Tuhan, Aku Ingin Mengikut Engkau"<br>Minggu, 26 Juni 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/8_paroErErs" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/Pu0weQezat4" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Persekutuan KPR</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Ikhlas Berbagi"<br>Minggu, 19 Juni 2022 - 16.00 WIB<br>Bpk. Sugianto</p>
+                                <p class="card-text">"Berbagi Injil Bukan Kristenisasi"<br>Minggu, 26 Juni 2022 - 16.00 WIB<br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -168,21 +168,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://meet.google.com/sxd-umed-hra" target="_blank" class="text-decoration-none">
+                            <a href="https://meet.google.com/aey-kpjc-mdi" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/pa.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Pemahaman Alkitab</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Alfa dan Omega"<br>Kamis, 28 April 2022 - 18.00 WIB <br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"Terus Berkarya di Tengah Keputusasaan"<br>Kamis, Juni 2022 - 18.00 WIB <br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://meet.google.com/sxd-umed-hra" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
+                                <a href="https://meet.google.com/aey-kpjc-mdi" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Link</a>
                             </div>
                         </div>
                     </div>
@@ -274,7 +274,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 12 Juni 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 19 Juni 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
