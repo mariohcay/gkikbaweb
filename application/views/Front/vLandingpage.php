@@ -114,18 +114,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/1wQ8jPhRc1s" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/9CbgTjsmB6k" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Kasih itu Sederhana"<br>Minggu, 10 Juli 2022 - 07.00 WIB<br>Pdt. Edi Wahono</p>
+                                <p class="card-text">"Belajar Mendengar-Nya Sebelum Melayani-Nya"<br>Minggu, 17 Juli 2022 - 07.00 WIB<br>Pdt. Dwi Santoso<br>(Disertai dengan Perjamuan Kudus)</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/1wQ8jPhRc1s" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/9CbgTjsmB6k" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
