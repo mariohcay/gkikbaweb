@@ -133,6 +133,9 @@
                 <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
+                            <a href="#ibadah" class="text-decoration-none">
+                                <img src="<?= base_url() ?>front/assets/img/ka.jpg" class="card-img-top">
+                            </a>
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
