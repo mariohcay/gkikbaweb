@@ -120,7 +120,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Meretas Koinonia Persahabatan"<br>Minggu, 31 Juli 2022 - 07.00 WIB<br>Pdt. Cathalia Kurnia Gunawan</p>
+                                <p class="card-text">"Memiliki Tetapi Tidak Melekat"<br>Minggu, 7 Agustus 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -139,7 +139,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"The Lorax: Sang Penjaga Pepohonan"<br>Minggu, 31 Juli 2022 - 09.00 WIB</p>
+                                <p class="card-text">"Hati-hati dengan Iri Hati"<br>Minggu, 7 Agustus 2022 - 07.00 WIB</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
@@ -273,7 +273,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 31 Juli 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 7 Agustus 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -285,7 +285,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 31 Juli 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 7 Agustus 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
