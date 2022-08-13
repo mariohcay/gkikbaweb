@@ -114,18 +114,18 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/RZ8NXOggHjA" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/b8G2gmiCDAo" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Memiliki Tetapi Tidak Melekat"<br>Minggu, 7 Agustus 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"Yesus Membawa Pertentangan"<br>Minggu, 14 Agustus 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/RZ8NXOggHjA" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/b8G2gmiCDAo" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Sekolah Minggu</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Hati-hati dengan Iri Hati"<br>Minggu, 7 Agustus 2022 - 07.00 WIB</p>
+                                <p class="card-text">"Taat Membawa Selamat"<br>Minggu, 14 Agustus 2022 - 07.00 WIB</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
