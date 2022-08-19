@@ -114,23 +114,23 @@
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://youtu.be/b8G2gmiCDAo" target="_blank" class="text-decoration-none">
+                            <a href="https://youtu.be/JqLu2oh6yLE" target="_blank" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/umum.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Yesus Membawa Pertentangan"<br>Minggu, 14 Agustus 2022 - 07.00 WIB<br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"Sabat yang Memerdekakan"<br>Minggu, 21 Agustus 2022 - 07.00 WIB<br>Pdt. Dwi Santoso</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
                                 <a href="<?= base_url() ?>Fronts/pilihOnsite" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Onsite</a>
-                                <a href="https://youtu.be/b8G2gmiCDAo" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="https://youtu.be/JqLu2oh6yLE" target="_blank" class="btn btn-primary mb-2 px-5 mx-1" style="border-radius: 10rem; font-size: 11pt">Online</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <a href="#ibadah" class="text-decoration-none">
@@ -167,21 +167,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center d-none">
+                <div class="col-lg-4 text-center">
                     <div class="mt-5">
                         <div class="card text-center shadow mx-3">
                             <!-- UBAH -->
-                            <a href="https://meet.google.com/dko-faeo-bpv" target="_blank" class="text-decoration-none">
+                            <a href="#ibadah" class="text-decoration-none">
                                 <img src="<?= base_url() ?>front/assets/img/pa.jpg" class="card-img-top">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">Pemahaman Alkitab</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Berani Membuka Diri"<br>Kamis, 28 Juli 2022 - 18.00 WIB <br>Pnt. Nella Simamora</p>
+                                <p class="card-text">"Kebahagiaan Orang Takut Tuhan"<br>Kamis, 25 Agustus 2022 - 18.00 WIB <br>Pnt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
                                 <!-- UBAH -->
-                                <a href="https://meet.google.com/dko-faeo-bpv" target="_blank" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Online</a>
+                                <a href="#ibadah" class="btn btn-primary mb-2 px-5" style="border-radius: 10rem; font-size: 11pt">Onsite di Gereja</a>
                             </div>
                         </div>
                     </div>
@@ -273,7 +273,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Warta Jemaat</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 7 Agustus 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/warta.docx" download="Warta Jemaat 14 Agustus 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
@@ -285,7 +285,7 @@
                         <div class="mb-2"><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
                         <h3 class="h4 mb-2">Liturgi Ibadah Umum</h3>
                         <!-- UBAH -->
-                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 7 Agustus 2022">
+                        <a class="text-decoration-none" href="<?= base_url() ?>front/assets/docs/liturgi.docx" download="Liturgi Ibadah 14 Agustus 2022">
                             <span class="h6 text-light"><i class="bi bi-download fs-4 mx-1"></i>
                                 Download
                             </span>
