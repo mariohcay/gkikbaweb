@@ -39,6 +39,14 @@
             <span>Ibadah</span></a>
         </li>
 
+        <li class="nav-item <?php if ($title === "Ibadah - GKI Kebonagung Web Services") {
+                              echo "active";
+                            } if($this->session->userdata('role')!=="admin"){ echo "d-none"; }?>">
+          <a class="nav-link" href="<?= base_url('Inventaris');?>">
+            <i class="fas fa-fw fa-suitcase"></i>
+            <span>Inventaris</span></a>
+        </li>
+
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline mt-4">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
