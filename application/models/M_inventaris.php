@@ -12,8 +12,8 @@ class M_inventaris extends CI_Model
         return $this->db->get_where('tb_inventaris', ['kode' => $kode])->row_array();
     }
 
-    public function tambahIbadah($data){
-        $this->db->insert('tb_ibadah', $data);
+    public function tambahInventaris($data){
+        $this->db->insert('tb_inventaris', $data);
     }
 
     public function updateIbadah($kodeIbadah, $data)

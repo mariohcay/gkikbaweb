@@ -16,8 +16,8 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
 
             <h3 class="h3 text-gray-800 mb-1">Inventaris Tim Multimedia</h3>
-            <a href="#" class="btn btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white mr-1"></i> Tambah Inventaris</a>
-            <!-- <a href="<?= base_url('Inventaris/tambahInventaris')?>" class="btn btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white mr-1"></i> Tambah Inventaris</a> -->
+            <!-- <a href="#" class="btn btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white mr-1"></i> Tambah Inventaris</a> -->
+            <a href="<?= base_url('Inventaris/tambahInventaris')?>" class="btn btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white mr-1"></i> Tambah Inventaris</a>
           </div>
           
           <!-- DataTales Example -->

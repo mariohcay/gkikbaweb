@@ -11,54 +11,74 @@
       <form action="<?= base_url('Inventaris/simpanUbah') ?>" method="POST">
         <ul class="list-group">
           <li class="list-group-item">
-            <label for="Id" class="font-weight-bold">Kode</label>
-            <input type="text" class="form-control d-block" value="<?= $inventaris['kode']; ?>" id="kode" name="kode" readonly>
+            <label for="kode" class="font-weight-bold">Kode</label>
+            <input type="text" class="form-control d-block" value="<?= $inventaris['kode']; ?>" id="kode" name="kode">
           </li>
           <li class="list-group-item">
-            <label for="Nama" class="font-weight-bold">Nama</label>
+            <label for="nama" class="font-weight-bold">Nama</label>
             <input type="text" class="form-control d-block" value="<?= $inventaris['nama']; ?>" id="nama" name="nama" autocomplete="off" required>
           </li>
           <li class="list-group-item">
-            <label for="Tanggal Beli" class="font-weight-bold">Tanggal Beli</label>
+            <label for="serialNum" class="font-weight-bold">Nomor Seri</label>
+            <input type="text" class="form-control d-block" value="<?= $inventaris['serialNum']; ?>" id="serialNum" name="serialNum" autocomplete="off">
+          </li>
+          <li class="list-group-item">
+            <label for="tglBeli" class="font-weight-bold">Tanggal Beli</label>
             <input type="date" class="form-control d-block" value="<?= $inventaris['tglBeli']; ?>" id="tglBeli" name="tglBeli" required>
           </li>
           <li class="list-group-item">
-            <label for="Tanggal Pembaharuan" class="font-weight-bold">Tanggal Pembaharuan</label>
+            <label for="tglBaru" class="font-weight-bold">Tanggal Pembaharuan</label>
             <input type="date" class="form-control d-block" value="<?= $inventaris['tglBaru']; ?>" id="tglBaru" name="tglBaru" required>
           </li>
           <li class="list-group-item">
-            <label for="Jumlah" class="font-weight-bold">Jumlah</label>
+            <label for="jumlah" class="font-weight-bold">Jumlah</label>
             <input type="number" class="form-control d-block" value="<?= $inventaris['jumlah']; ?>" id="jumlah" name="jumlah" autocomplete="off" required>
           </li>
           <li class="list-group-item">
-            <label for="Kondisi" class="font-weight-bold">Kondisi</label>
+            <label for="kondisi" class="font-weight-bold">Kondisi</label>
             <select class="custom-select" name="kondisi">
               <option value="Bagus" class="d-block" <?php if ($inventaris['kondisi'] === "Bagus") {
-                                                  echo "selected";
-                                                }; ?>>Bagus</option>
+                                                      echo "selected";
+                                                    }; ?>>Bagus</option>
               <option value="Kurang" class="d-block" <?php if ($inventaris['kondisi'] === "Kurang") {
-                                                  echo "selected";
-                                                }; ?>>Kurang</option>
+                                                        echo "selected";
+                                                      }; ?>>Kurang</option>
               <option value="Rusak" class="d-block" <?php if ($inventaris['kondisi'] === "Rusak") {
-                                                  echo "selected";
-                                                }; ?>>Rusak</option>
+                                                      echo "selected";
+                                                    }; ?>>Rusak</option>
             </select>
           </li>
           <li class="list-group-item">
-            <label for="Jenis" class="font-weight-bold">Jenis</label>
-            <select class="custom-select" name="jenis">
-              <option value="Aset" class="d-block" <?php if ($inventaris['jenis'] === "Aset") {
-                                                  echo "selected";
-                                                }; ?>>Aset</option>
-              <option value="Habis Pakai" class="d-block" <?php if ($inventaris['jenis'] === "Habis Pakai") {
-                                                  echo "selected";
-                                                }; ?>>Habis Pakai</option>
+            <label for="tempatSimpan" class="font-weight-bold">Tempat Penyimpanan</label>
+            <select class="custom-select" name="tempatSimpan">
+              <option value="Gereja" class="d-block" <?php if ($inventaris['tempatSimpan'] === "Gereja") {
+                                                        echo "selected";
+                                                      }; ?>>Gereja</option>
+              <option value="Konsistori" class="d-block" <?php if ($inventaris['tempatSimpan'] === "Konsistori") {
+                                                            echo "selected";
+                                                          }; ?>>Konsistori</option>
+              <option value="Ruang Komisi" class="d-block" <?php if ($inventaris['tempatSimpan'] === "Ruang Komisi") {
+                                                              echo "selected";
+                                                            }; ?>>Ruang Komisi</option>
+              <option value="Ruang Multimedia" class="d-block" <?php if ($inventaris['tempatSimpan'] === "Ruang Multimedia") {
+                                                                  echo "selected";
+                                                                }; ?>>Ruang Multimedia</option>
+              <option value="Graha Eklesia" class="d-block" <?php if ($inventaris['tempatSimpan'] === "Graha Eklesia") {
+                                                              echo "selected";
+                                                            }; ?>>Graha Eklesia</option>
+              <option value="Pastori" class="d-block" <?php if ($inventaris['tempatSimpan'] === "Pastori") {
+                                                              echo "selected";
+                                                            }; ?>>Pastori</option>
             </select>
           </li>
           <li class="list-group-item">
-            <label for="Milik" class="font-weight-bold">Milik</label>
+            <label for="harga" class="font-weight-bold">Harga</label>
+            <input type="number" class="form-control d-block" value="<?= $inventaris['harga']; ?>" id="harga" name="harga">
+          </li>
+          <li class="list-group-item">
+            <label for="milik" class="font-weight-bold">Milik</label>
             <input type="text" class="form-control d-block" value="<?= $inventaris['milik']; ?>" id="milik" name="milik" readonly>
-          </li>   
+          </li>
         </ul>
         <hr>
         <div class="d-inline float-right align-items-center">

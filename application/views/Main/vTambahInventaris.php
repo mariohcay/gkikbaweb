@@ -8,57 +8,68 @@
     </div>
     <div class="card-body">
       <?= $this->session->flashdata('message'); ?>
-      <form action="<?= base_url('Inventaris/simpanTambah') ?>" method="POST">
+      <form action="<?= base_url('Inventaris/tambahUbah') ?>" method="POST">
         <ul class="list-group">
           <li class="list-group-item">
-            <label for="Id" class="font-weight-bold">Kode</label>
-            <input type="text" class="form-control d-block" value="<?= $inventaris['kode']; ?>" id="kode" name="kode" autocomplete="off" required>
+            <label for="kode" class="font-weight-bold">Kode</label>
+            <input type="text" class="form-control d-block" id="kode" name="kode">
           </li>
           <li class="list-group-item">
-            <label for="Nama" class="font-weight-bold">Nama</label>
-            <input type="text" class="form-control d-block" value="<?= $inventaris['nama']; ?>" id="nama" name="nama" autocomplete="off" required>
+            <label for="nama" class="font-weight-bold">Nama</label>
+            <input type="text" class="form-control d-block" id="nama" name="nama" autocomplete="off" required>
           </li>
           <li class="list-group-item">
-            <label for="Tanggal Beli" class="font-weight-bold">Tanggal Beli</label>
-            <input type="date" class="form-control d-block" value="<?= $inventaris['tglBeli']; ?>" id="tglBeli" name="tglBeli" required>
+            <label for="serialNum" class="font-weight-bold">Nomor Seri</label>
+            <input type="text" class="form-control d-block" id="serialNum" name="serialNum" autocomplete="off">
           </li>
           <li class="list-group-item">
-            <label for="Tanggal Pembaharuan" class="font-weight-bold">Tanggal Pembaharuan</label>
-            <input type="date" class="form-control d-block" value="<?= $inventaris['tglBaru']; ?>" id="tglBaru" name="tglBaru" required>
+            <label for="tglBeli" class="font-weight-bold">Tanggal Beli</label>
+            <input type="date" class="form-control d-block" id="tglBeli" name="tglBeli" required>
           </li>
           <li class="list-group-item">
-            <label for="Jumlah" class="font-weight-bold">Jumlah</label>
-            <input type="number" class="form-control d-block" value="<?= $inventaris['jumlah']; ?>" id="jumlah" name="jumlah" autocomplete="off" required>
+            <label for="tglBaru" class="font-weight-bold">Tanggal Pembaharuan</label>
+            <input type="date" class="form-control d-block" id="tglBaru" name="tglBaru" required>
           </li>
           <li class="list-group-item">
-            <label for="Kondisi" class="font-weight-bold">Kondisi</label>
+            <label for="jumlah" class="font-weight-bold">Jumlah</label>
+            <input type="number" class="form-control d-block" id="jumlah" name="jumlah" autocomplete="off" required>
+          </li>
+          <li class="list-group-item">
+            <label for="kondisi" class="font-weight-bold">Kondisi</label>
             <select class="custom-select" name="kondisi">
-              <option value="Bagus" class="d-block" <?php if ($inventaris['kondisi'] === "Bagus") {
-                                                  echo "selected";
-                                                }; ?>>Bagus</option>
-              <option value="Kurang" class="d-block" <?php if ($inventaris['kondisi'] === "Kurang") {
-                                                  echo "selected";
-                                                }; ?>>Kurang</option>
-              <option value="Rusak" class="d-block" <?php if ($inventaris['kondisi'] === "Rusak") {
-                                                  echo "selected";
-                                                }; ?>>Rusak</option>
+              <option value="Bagus" class="d-block">Bagus</option>
+              <option value="Kurang" class="d-block">Kurang</option>
+              <option value="Rusak" class="d-block">Rusak</option>
             </select>
           </li>
           <li class="list-group-item">
-            <label for="Jenis" class="font-weight-bold">Jenis</label>
-            <select class="custom-select" name="jenis">
-              <option value="Aset" class="d-block" <?php if ($inventaris['jenis'] === "Aset") {
-                                                  echo "selected";
-                                                }; ?>>Aset</option>
-              <option value="Habis Pakai" class="d-block" <?php if ($inventaris['jenis'] === "Habis Pakai") {
-                                                  echo "selected";
-                                                }; ?>>Habis Pakai</option>
+            <label for="tempatSimpan" class="font-weight-bold">Tempat Penyimpanan</label>
+            <select class="custom-select" name="tempatSimpan">
+              <option value="Gereja" class="d-block">Gereja</option>
+              <option value="Konsistori" class="d-block">Konsistori</option>
+              <option value="Ruang Komisi" class="d-block">Ruang Komisi</option>
+              <option value="Ruang Multimedia" class="d-block">Ruang Multimedia</option>
+              <option value="Graha Eklesia" class="d-block">Graha Eklesia</option>
+              <option value="Pastori" class="d-block">Pastori</option>
             </select>
           </li>
           <li class="list-group-item">
-            <label for="Milik" class="font-weight-bold">Milik</label>
-            <input type="text" class="form-control d-block" value="<?= $inventaris['milik']; ?>" id="milik" name="milik" autocomplete="off" required>
-          </li>   
+            <label for="harga" class="font-weight-bold">Harga</label>
+            <input type="number" class="form-control d-block" id="harga" name="harga">
+          </li>
+          <li class="list-group-item">
+            <label for="milik" class="font-weight-bold">Milik</label>
+              <select class="custom-select" name="milik">
+                <option value="Majelis Jemaat" class="d-block">Majelis Jemaat</option>
+                <option value="Komisi Anak" class="d-block">Komisi Anak</option>
+                <option value="Komisi Pemuda Remaja" class="d-block">Komisi Pemuda Remaja</option>
+                <option value="Komisi Dewasa" class="d-block">Komisi Dewasa</option>
+                <option value="Komisi Lansia" class="d-block">Komisi Lansia</option>
+                <option value="Komisi Liturgi dan Musik Gerejawi" class="d-block">Komisi Liturgi dan Musik Gerejawi</option>
+                <option value="Komisi Penolong Kedukaan" class="d-block">Komisi Penolong Kedukaan</option>
+                <option value="Tim Multimedia" class="d-block">Tim Multimedia</option>
+              </select>
+          </li>
         </ul>
         <hr>
         <div class="d-inline float-right align-items-center">
