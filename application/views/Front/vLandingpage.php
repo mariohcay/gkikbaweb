@@ -135,7 +135,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ibadah Umum</h4>
                                 <!-- UBAH -->
-                                <p class="card-text">"Sabat yang Memerdekakan"<br>Minggu, 3 November 2024 - 07.00
+                                <p class="card-text">"Kasihilah Tuhan Allahmu"<br>Minggu, 3 November 2024 - 07.00
                                     WIB<br>Pdt. Nella Simamora</p>
                             </div>
                             <div class="card-body">
