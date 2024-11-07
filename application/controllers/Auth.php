@@ -1,36 +1,37 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Auth extends CI_Controller
+{
 
-	public function __construct()
-	{
-		parent::__construct();
+    public function __construct()
+    {
+        parent::__construct();
         $this->load->model('m_jemaat');
-	}
+    }
 
-	public function index()
-	{
-		$data['title'] = 'Selamat Datang - GKI Kebonagung';
+    public function index()
+    {
+        $data['title'] = 'Selamat Datang - GKI Kebonagung';
         $this->load->view('Templates/vHeader', $data);
         $this->load->view('Auth/vLogin');
-		$this->load->view('Templates/vFooter');
-		
-		$user = $this->input->post('username');
-        if($user){
+        $this->load->view('Templates/vFooter');
+
+        $user = $this->input->post('username');
+        if ($user) {
             $this->_login();
         }
-	}
+    }
 
-	private function _login()
+    private function _login()
     {
         $user = $this->input->post('username');
         $pass = $this->input->post('password');
 
         $jemaat = $this->m_jemaat->ambilJemaat($user);
 
-        if($jemaat){
-            if(password_verify($pass, $jemaat['password'])){
+        if ($jemaat) {
+            if (password_verify($pass, $jemaat['password'])) {
                 $data = [
                     'id' => $jemaat['id'],
                     'username' => $jemaat['username'],
@@ -38,10 +39,10 @@ class Auth extends CI_Controller {
                     'role' => $jemaat['role']
                 ];
                 $this->session->set_userdata($data);
-                $this->session->set_flashdata('welcome', '<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><h4>Hai, <strong>'.$data['nama'].'</strong></h4><br>
+                $this->session->set_flashdata('welcome', '<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><h4>Hai, <strong>' . $data['nama'] . '</strong></h4><br>
                 Selamat datang di GKI Kebonagung Web Services<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                 redirect('Dashboard');
-            }else{
+            } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Username atau password salah</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
                 redirect('Auth');
             }
@@ -58,9 +59,9 @@ class Auth extends CI_Controller {
         $this->load->view('Templates/vHeader', $data);
         $this->load->view('Auth/vRegister');
         $this->load->view('Templates/vFooter');
-        
+
         $user = $this->input->post('username');
-        if($user){
+        if ($user) {
             $this->_register();
         }
     }
@@ -76,7 +77,7 @@ class Auth extends CI_Controller {
 
         $jemaat = $this->m_jemaat->daftarJemaat();
 
-        $id = "JM".strval(count($jemaat)+100001);
+        $id = "JM" . strval(count($jemaat) + 100001);
         $session = [
             'id' => $id,
             'username' => $user,
@@ -85,33 +86,33 @@ class Auth extends CI_Controller {
             'password' => password_hash($pass1, PASSWORD_BCRYPT),
             'telepon' => $telepon
         ];
-        foreach($jemaat as $data){
-            if($data['username'] === $user){
+        foreach ($jemaat as $data) {
+            if ($data['username'] === $user) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Username telah terpakai</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
                 $this->session->set_flashdata($session);
                 redirect('Auth/register');
             }
         }
-        if($pass1 !== $pass2){
+        if ($pass1 !== $pass2) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-between" role="alert"></i> <small>Konfirmasi Password tidak cocok</small><i class="fa fa-exclamation-circle my-auto"></i></div>');
             $this->session->set_flashdata($session);
             redirect('Auth/register');
-        }else{
+        } else {
             $this->m_jemaat->tambahJemaat($session);
             $this->session->set_flashdata('message', '<div class="alert alert-success d-flex justify-content-between" role="alert"></i> Berhasil membuat akun<i class="fa fa-check my-auto"></i></div>');
             redirect('Auth');
         }
     }
 
-    public function checkUsername(){
+    public function checkUsername()
+    {
         $user = $this->input->post('username');
         $check = $this->m_jemaat->ambilJemaat($user);
         $result = "0";
-        if(!empty($check)){
+        if (!empty($check)) {
             $result = "1";
         }
 
         echo json_encode($result);
     }
 }
-

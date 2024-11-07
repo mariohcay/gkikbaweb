@@ -12,7 +12,7 @@
         <ul class="list-group">
           <li class="list-group-item">
             <label for="kode" class="font-weight-bold">Kode</label>
-            <input type="text" class="form-control d-block" value="<?= $inventaris['kode']; ?>" id="kode" name="kode">
+            <input type="text" class="form-control d-block" value="<?= $inventaris['kode']; ?>" id="kode" name="kode" readonly>
           </li>
           <li class="list-group-item">
             <label for="nama" class="font-weight-bold">Nama</label>
